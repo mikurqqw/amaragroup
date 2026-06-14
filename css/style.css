@@ -588,35 +588,46 @@ textarea::placeholder {
 .social-links {
   display: flex;
   flex-direction: row;
-  gap: 1rem;
+  gap: 15px;
   margin-top: 1.5rem;
   align-items: center;
 }
+
 .social-icon {
-  width: 40px;
-  height: 40px;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--white);
-  transition: all 0.3s ease;
-  text-decoration: none;
-  padding: 0;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 45px !important;
+  height: 45px !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  border-radius: 50% !important;
+  text-decoration: none !important;
+  box-sizing: border-box !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  background-color: transparent;
+  transition: all 0.3s ease !important;
 }
+
 .social-icon svg {
+  width: 20px !important;
+  height: 20px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: block !important;
   stroke: var(--white);
-  width: 18px;
-  height: 18px;
+  fill: none;
   transition: stroke 0.3s ease;
 }
+
+/* Эффект при наведении */
 .social-icon:hover {
-  background-color: var(--white);
-  border-color: var(--white);
+  background-color: var(--white) !important;
+  border-color: var(--white) !important;
 }
+
 .social-icon:hover svg {
-  stroke: var(--bg-footer);
+  stroke: var(--bg-footer) !important;
 }
 
 .newsletter-form {

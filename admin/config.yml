@@ -1,0 +1,22 @@
+backend:
+  name: git-gateway
+  branch: main # Убедись, что ветка в твоем GitHub называется main (или замени на master)
+
+media_folder: "assets/images/portfolio" # Куда физически будут сохраняться загруженные фотки
+public_folder: "assets/images/portfolio" # Какой путь прописывать в коде
+
+collections:
+  - name: "data"
+    label: "Управление сайтом"
+    files:
+      - label: "Галерея Портфолио"
+        name: "portfolio"
+        file: "js/portfolio-data.json" # Файл, который CMS будет перезаписывать
+        fields:
+          - label: "Проекты"
+            name: "projects"
+            widget: "list"
+            fields:
+              - {label: "Категория", name: "category", widget: "select", options: ["private", "corporate", "brand", "yacht"]}
+              - {label: "Описание для SEO", name: "alt", widget: "string"}
+              - {label: "Фотография", name: "image", widget: "image"}

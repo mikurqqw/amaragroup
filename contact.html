@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Amara Group | Luxury Events</title>
+    <meta
+      name="description"
+      content="Amara Group — агентство полного цикла в ОАЭ и Катаре. Организация роскошных свадеб, корпоративных мероприятий, бренд-активаций и аренда яхт."
+    />
+    <meta
+      name="keywords"
+      content="luxury events Dubai, организация мероприятий Дубай, свадьба в Катаре, ивент агентство ОАЭ, корпоративы Доха"
+    />
+    <meta name="author" content="Amara Group" />
+
+    <meta
+      property="og:title"
+      content="Amara Group | Events That Remain Forever In Memory"
+    />
+    <meta
+      property="og:description"
+      content="Полный спектр услуг по организации роскошных мероприятий на территории стран Персидского залива."
+    />
+    <meta
+      property="og:image"
+      content="https://www.amaraevent.com/herobannerpicture.jpg"
+    />
+    <meta property="og:type" content="website" />
+
+    <meta name="robots" content="index, follow" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <script src="js/translations.js" defer></script>
+    <script src="js/i18n.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/animations.js" defer></script>
+    <script src="js/portfolio.js" defer></script>
+  </head>
+  <body class="bg-cream">
+    <header class="navbar scrolled">
+      <div class="nav-container">
+        <a href="index.html" class="logo-link">
+          <img
+            src="https://www.amaraevent.com/newheroloamara.png"
+            alt="Amara Group Logo"
+            class="nav-logo logo-dark"
+          />
+        </a>
+        <nav class="nav-links">
+          <a href="index.html" data-i18n="nav_home">Главная</a>
+          <a href="index.html#about" data-i18n="nav_about">О нас</a>
+          <a href="services.html" data-i18n="nav_services">Услуги</a>
+          <a href="portfolio.html" data-i18n="nav_portfolio">Портфолио</a>
+          <a href="contact.html" class="active" data-i18n="nav_contact"
+            >Контакты</a
+          >
+        </nav>
+        <div class="nav-actions">
+          <div class="lang-switcher">
+            <select class="lang-select">
+              <option value="ru">RU</option>
+              <option value="en">EN</option>
+              <option value="ar">AR</option>
+            </select>
+          </div>
+          <a
+            href="https://w.app/xpcw7w"
+            target="_blank"
+            class="btn btn-primary"
+            data-i18n="btn_plan"
+            >Запланировать событие</a
+          >
+          <button class="hamburger" aria-label="Menu" style="color: #3d1f0d">
+            ☰
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="mobile-menu">
+      <button class="close-menu">✕</button>
+      <div class="lang-switcher" style="margin-bottom: 2rem">
+        <select
+          class="lang-select"
+          style="
+            color: var(--text-primary);
+            border-color: var(--accent-primary);
+          "
+        >
+          <option value="ru">RU</option>
+          <option value="en">EN</option>
+          <option value="ar">AR</option>
+        </select>
+      </div>
+      <nav class="mobile-nav-links">
+        <a href="index.html" data-i18n="nav_home">Главная</a>
+        <a href="index.html#about" data-i18n="nav_about">О нас</a>
+        <a href="services.html" data-i18n="nav_services">Услуги</a>
+        <a href="portfolio.html" data-i18n="nav_portfolio">Портфолио</a>
+        <a href="contact.html" data-i18n="nav_contact">Контакты</a>
+        <a
+          href="https://w.app/xpcw7w"
+          target="_blank"
+          class="btn btn-primary mobile-btn"
+          data-i18n="btn_plan"
+          >Запланировать событие</a
+        >
+      </nav>
+    </div>
+
+    <main class="page-top-padding">
+      <section class="page-hero text-center container">
+        <span class="label animate-from-bottom" data-i18n="cta_label"
+          >СВЯЖИТЕСЬ С НАМИ</span
+        >
+        <h1
+          class="animate-from-bottom"
+          style="color: var(--text-primary)"
+          data-i18n="cp_title"
+        >
+          Давайте запланируем что-то незабываемое
+        </h1>
+        <p
+          class="subtitle animate-from-bottom"
+          style="color: var(--text-secondary)"
+          data-i18n="cta_desc"
+        >
+          Расскажите нам о своем видении, и наша команда свяжется с вами.
+        </p>
+      </section>
+
+      <section class="contact-page-content" style="padding-bottom: 6rem">
+        <div class="container contact-grid">
+          <div class="contact-page-info animate-from-left">
+            <h2 style="color: var(--text-primary)" data-i18n="cp_reach">
+              Свяжитесь напрямую
+            </h2>
+            <p
+              style="color: var(--text-secondary); margin-bottom: 2rem"
+              data-i18n="cp_reach_d"
+            >
+              Мы всегда готовы обсудить ваши идеи.
+            </p>
+            <ul class="contact-list dark-text">
+              <li data-i18n="cta_loc">
+                📍 <strong>Наши офисы:</strong> Дубай, ОАЭ и Доха, Катар
+              </li>
+              <li data-i18n="cta_phone">
+                📞 <strong>Телефон:</strong> +971 50 532 5095
+              </li>
+              <li data-i18n="cta_email">
+                ✉ <strong>Email:</strong> info@amaraevent.com
+              </li>
+              <li data-i18n="cta_hours">
+                🕐 <strong>Рабочие часы:</strong> Вс–Чт · 9:00 – 18:00 GST
+              </li>
+            </ul>
+          </div>
+
+          <div class="contact-form-wrap white-bg animate-from-right">
+            <h3
+              style="
+                font-family: var(--font-heading);
+                font-size: 1.8rem;
+                margin-bottom: 2rem;
+                color: var(--text-primary);
+              "
+              data-i18n="form_title"
+            >
+              Расскажите о своем событии
+            </h3>
+            <form class="event-form form-advanced">
+              <div class="form-row">
+                <div class="form-group">
+                  <label data-i18n="form_name">Полное имя</label>
+                  <input
+                    type="text"
+                    data-i18n="pl_name"
+                    placeholder="Иван Иванов"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label data-i18n="form_email_lbl">Email адрес</label>
+                  <input
+                    type="email"
+                    data-i18n="pl_email"
+                    placeholder="ivan@example.com"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label data-i18n="form_type">Тип события</label>
+                  <input
+                    type="text"
+                    data-i18n="pl_type"
+                    placeholder="Свадьба, Гала, Активация..."
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label data-i18n="form_date">Дата события</label>
+                  <input type="date" required />
+                </div>
+              </div>
+              <div class="form-group">
+                <label data-i18n="form_loc">Локация</label>
+                <select required>
+                  <option value="" disabled selected data-i18n="loc_sel">
+                    Выберите страну
+                  </option>
+                  <option value="UAE" data-i18n="loc_uae">ОАЭ</option>
+                  <option value="Qatar" data-i18n="loc_qa">Катар</option>
+                  <option value="Saudi Arabia" data-i18n="loc_sa">
+                    Саудовская Аравия
+                  </option>
+                  <option value="Other" data-i18n="loc_other">Другое</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label data-i18n="form_msg">Опишите ваше событие</label>
+                <textarea
+                  data-i18n="pl_msg"
+                  placeholder="Опишите ваше видение..."
+                  rows="4"
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="btn btn-primary w-100"
+                data-i18n="btn_send"
+              >
+                Отправить запрос
+              </button>
+              <p
+                class="form-success hidden"
+                style="color: var(--accent-primary)"
+                data-i18n="form_success"
+              >
+                Спасибо! Мы свяжемся с вами в течение 12 часов.
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col animate-from-bottom">
+            <img
+              src="https://www.amaraevent.com/newwhotelogoamara.png"
+              alt="Amara Group"
+              class="footer-logo"
+            />
+            <p class="footer-tagline" data-i18n="ftr_tagline">
+              Каждое событие — это история, которую вы рассказываете миру.
+            </p>
+            <div class="social-links">
+              <a
+                href="https://www.instagram.com/amara.eventgroup/"
+                target="_blank"
+                class="social-icon"
+                ><svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path
+                    d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                  ></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg
+              ></a>
+              <a
+                href="https://www.linkedin.com/company/amara-event-groups/"
+                target="_blank"
+                class="social-icon"
+                ><svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                  ></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle></svg
+              ></a>
+              <a
+                href="https://www.facebook.com/people/Amara-Event-Group/61588950360241/?rdid=UpHWcttzKWzYfDXJ"
+                target="_blank"
+                class="social-icon"
+                ><svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                  ></path></svg
+              ></a>
+            </div>
+          </div>
+          <div
+            class="footer-col animate-from-bottom"
+            style="transition-delay: 0.1s"
+          >
+            <h4 data-i18n="ftr_quick">БЫСТРЫЕ ССЫЛКИ</h4>
+            <a href="services.html" data-i18n="nav_services">Наши услуги</a>
+            <a href="portfolio.html" data-i18n="ftr_past">Прошедшие события</a>
+            <a href="index.html#about" data-i18n="ftr_test">Отзывы клиентов</a>
+            <a href="index.html#about" data-i18n="ftr_team">О команде</a>
+          </div>
+          <div
+            class="footer-col animate-from-bottom"
+            style="transition-delay: 0.2s"
+          >
+            <h4 data-i18n="ftr_srv">УСЛУГИ</h4>
+            <a href="services.html" data-i18n="srv_1_t">Частные праздники</a>
+            <a href="services.html" data-i18n="srv_2_t"
+              >Корпоративные события</a
+            >
+            <a href="services.html" data-i18n="srv_3_t">Активации бренда</a>
+            <a href="services.html" data-i18n="srv_5_t">Аренда яхт</a>
+          </div>
+          <div
+            class="footer-col animate-from-bottom"
+            style="transition-delay: 0.3s"
+          >
+            <h4 data-i18n="ftr_news">РАССЫЛКА</h4>
+            <p data-i18n="ftr_news_d">Будьте в курсе последних тенденций.</p>
+            <form class="newsletter-form">
+              <input
+                type="email"
+                data-i18n="form_email_lbl"
+                placeholder="Email"
+                required
+              />
+              <button
+                type="submit"
+                class="btn btn-primary btn-small"
+                data-i18n="btn_sub"
+              >
+                Подписаться
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p data-i18n="ftr_rights">© 2026 Amara Group. Все права защищены.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+    <script src="js/animations.js" defer></script>
+  </body>
+</html>

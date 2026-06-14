@@ -1,0 +1,70 @@
+@media (max-width: 1024px) {
+  .services-grid,
+  .portfolio-grid-4,
+  .services-grid-3,
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .masonry-grid {
+    columns: 2;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  }
+  h2,
+  .hero h2 {
+    font-size: 2.5rem;
+  }
+  .nav-links,
+  .nav-actions .btn {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+  .about-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .contact-form-wrap {
+    padding: 2rem 1.5rem;
+  }
+  .form-advanced .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  [dir="rtl"] .section-header {
+    align-items: flex-end;
+  }
+}
+@media (max-width: 480px) {
+  .services-grid,
+  .portfolio-grid-4,
+  .services-grid-3,
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+  .masonry-grid {
+    columns: 1;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero-buttons {
+    flex-direction: column;
+  }
+  .about-images {
+    grid-template-columns: 1fr;
+  }
+}

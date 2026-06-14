@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="ru">
+  <<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Amara Group | Luxury Events</title>
+    <meta
+      name="description"
+      content="Amara Group — агентство полного цикла в ОАЭ и Катаре. Организация роскошных свадеб, корпоративных мероприятий, бренд-активаций и аренда яхт."
+    />
+    <meta
+      name="keywords"
+      content="luxury events Dubai, организация мероприятий Дубай, свадьба в Катаре, ивент агентство ОАЭ, корпоративы Доха"
+    />
+    <meta name="author" content="Amara Group" />
+
+    <meta
+      property="og:title"
+      content="Amara Group | Events That Remain Forever In Memory"
+    />
+    <meta
+      property="og:description"
+      content="Полный спектр услуг по организации роскошных мероприятий на территории стран Персидского залива."
+    />
+    <meta
+      property="og:image"
+      content="https://www.amaraevent.com/herobannerpicture.jpg"
+    />
+    <meta property="og:type" content="website" />
+
+    <meta name="robots" content="index, follow" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <script src="js/translations.js" defer></script>
+    <script src="js/i18n.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/animations.js" defer></script>
+    <script src="js/portfolio.js" defer></script>
+  </head>
+  <body>
+    <header class="navbar scrolled">
+      <div class="nav-container">
+        <a href="index.html" class="logo-link">
+          <img
+            src="https://www.amaraevent.com/newheroloamara.png"
+            alt="Amara Group Logo"
+            class="nav-logo logo-dark"
+          />
+        </a>
+        <nav class="nav-links">
+          <a href="index.html" data-i18n="nav_home">Главная</a>
+          <a href="index.html#about" data-i18n="nav_about">О нас</a>
+          <a href="services.html" data-i18n="nav_services">Услуги</a>
+          <a href="portfolio.html" class="active" data-i18n="nav_portfolio"
+            >Портфолио</a
+          >
+          <a href="contact.html" data-i18n="nav_contact">Контакты</a>
+        </nav>
+        <div class="nav-actions">
+          <div class="lang-switcher">
+            <select class="lang-select">
+              <option value="ru">RU</option>
+              <option value="en">EN</option>
+              <option value="ar">AR</option>
+            </select>
+          </div>
+          <a
+            href="https://w.app/xpcw7w"
+            target="_blank"
+            class="btn btn-primary"
+            data-i18n="btn_plan"
+            >Запланировать событие</a
+          >
+          <button class="hamburger" aria-label="Menu" style="color: #3d1f0d">
+            ☰
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="mobile-menu">
+      <button class="close-menu">✕</button>
+      <div class="lang-switcher" style="margin-bottom: 2rem">
+        <select
+          class="lang-select"
+          style="
+            color: var(--text-primary);
+            border-color: var(--accent-primary);
+          "
+        >
+          <option value="ru">RU</option>
+          <option value="en">EN</option>
+          <option value="ar">AR</option>
+        </select>
+      </div>
+      <nav class="mobile-nav-links">
+        <a href="index.html" data-i18n="nav_home">Главная</a>
+        <a href="index.html#about" data-i18n="nav_about">О нас</a>
+        <a href="services.html" data-i18n="nav_services">Услуги</a>
+        <a href="portfolio.html" data-i18n="nav_portfolio">Портфолио</a>
+        <a href="contact.html" data-i18n="nav_contact">Контакты</a>
+        <a
+          href="https://w.app/xpcw7w"
+          target="_blank"
+          class="btn btn-primary mobile-btn"
+          data-i18n="btn_plan"
+          >Запланировать событие</a
+        >
+      </nav>
+    </div>
+
+    <main class="page-top-padding">
+      <section class="page-hero text-center container">
+        <span class="label animate-from-bottom" data-i18n="port_label"
+          >НАША РАБОТА</span
+        >
+        <h1
+          class="animate-from-bottom"
+          style="color: var(--text-primary)"
+          data-i18n="port_title"
+        >
+          Портфолио совершенства
+        </h1>
+        <p
+          class="subtitle animate-from-bottom"
+          style="color: var(--text-secondary)"
+          data-i18n="pp_desc"
+        >
+          Подборка событий, которые мы провели в странах Персидского залива.
+        </p>
+      </section>
+
+      <section class="portfolio-content container">
+        <div class="portfolio-filters animate-from-bottom hover-zone">
+          <button
+            class="filter-btn active"
+            data-filter="all"
+            data-i18n="flt_all"
+          >
+            Все
+          </button>
+          <button class="filter-btn" data-filter="private" data-i18n="flt_prv">
+            Частные праздники
+          </button>
+          <button
+            class="filter-btn"
+            data-filter="corporate"
+            data-i18n="flt_crp"
+          >
+            Корпоративные события
+          </button>
+          <button class="filter-btn" data-filter="brand" data-i18n="flt_brn">
+            Активации бренда
+          </button>
+          <button class="filter-btn" data-filter="yacht" data-i18n="flt_ych">
+            Аренда яхт
+          </button>
+        </div>
+
+        <div class="masonry-grid hover-zone" id="portfolio-grid">
+          <div class="masonry-item portfolio-item" data-category="private">
+            <img
+              src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=600"
+              alt="Wedding"
+            />
+          </div>
+          <div class="masonry-item portfolio-item" data-category="private">
+            <img
+              src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=600"
+              alt="Birthday"
+            />
+          </div>
+          <div class="masonry-item portfolio-item" data-category="private">
+            <img
+              src="https://images.unsplash.com/photo-1621263764928-df1444c5e859?w=600"
+              alt="Cake"
+            />
+          </div>
+          <div class="masonry-item portfolio-item" data-category="corporate">
+            <img
+              src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=600"
+              alt="Conference"
+            />
+          </div>
+          <div class="masonry-item portfolio-item" data-category="corporate">
+            <img
+              src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=600"
+              alt="Gala"
+            />
+          </div>
+          <div class="masonry-item portfolio-item" data-category="corporate">
+            <img
+              src="https://images.unsplash.com/photo-1556761175-5973dc0f32b7?w=600"
+              alt="Meeting"
+            />
+          </div>
+          <div class="masonry-item portfolio-item" data-category="brand">
+            <img
+              src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600"
+              alt="Crowd"
+            />
+          </div>
+          <div class="masonry-item portfolio-item" data-category="brand">
+            <img
+              src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600"
+              alt="Expo"
+            />
+          </div>
+          <div class="masonry-item portfolio-item" data-category="brand">
+            <img
+              src="https://images.unsplash.com/photo-1561489413-985b06da5bee?w=600"
+              alt="Neon"
+            />
+          </div>
+          <div class="masonry-item portfolio-item" data-category="yacht">
+            <img
+              src="https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?w=600"
+              alt="Yacht"
+            />
+          </div>
+          <div class="masonry-item portfolio-item" data-category="yacht">
+            <img
+              src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600"
+              alt="Deck"
+            />
+          </div>
+          <div class="masonry-item portfolio-item" data-category="yacht">
+            <img
+              src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600"
+              alt="Aerial"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col animate-from-bottom">
+            <img
+              src="https://www.amaraevent.com/newwhotelogoamara.png"
+              alt="Amara Group"
+              class="footer-logo"
+            />
+            <p class="footer-tagline" data-i18n="ftr_tagline">
+              Каждое событие — это история, которую вы рассказываете миру.
+            </p>
+            <div class="social-links">
+              <a
+                href="https://www.instagram.com/amara.eventgroup/"
+                target="_blank"
+                class="social-icon"
+                ><svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path
+                    d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                  ></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg
+              ></a>
+              <a
+                href="https://www.linkedin.com/company/amara-event-groups/"
+                target="_blank"
+                class="social-icon"
+                ><svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                  ></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle></svg
+              ></a>
+              <a
+                href="https://www.facebook.com/people/Amara-Event-Group/61588950360241/?rdid=UpHWcttzKWzYfDXJ"
+                target="_blank"
+                class="social-icon"
+                ><svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                  ></path></svg
+              ></a>
+            </div>
+          </div>
+          <div
+            class="footer-col animate-from-bottom"
+            style="transition-delay: 0.1s"
+          >
+            <h4 data-i18n="ftr_quick">БЫСТРЫЕ ССЫЛКИ</h4>
+            <a href="services.html" data-i18n="nav_services">Наши услуги</a>
+            <a href="portfolio.html" data-i18n="ftr_past">Прошедшие события</a>
+            <a href="index.html#about" data-i18n="ftr_test">Отзывы клиентов</a>
+            <a href="index.html#about" data-i18n="ftr_team">О команде</a>
+          </div>
+          <div
+            class="footer-col animate-from-bottom"
+            style="transition-delay: 0.2s"
+          >
+            <h4 data-i18n="ftr_srv">УСЛУГИ</h4>
+            <a href="services.html" data-i18n="srv_1_t">Частные праздники</a>
+            <a href="services.html" data-i18n="srv_2_t"
+              >Корпоративные события</a
+            >
+            <a href="services.html" data-i18n="srv_3_t">Активации бренда</a>
+            <a href="services.html" data-i18n="srv_5_t">Аренда яхт</a>
+          </div>
+          <div
+            class="footer-col animate-from-bottom"
+            style="transition-delay: 0.3s"
+          >
+            <h4 data-i18n="ftr_news">РАССЫЛКА</h4>
+            <p data-i18n="ftr_news_d">Будьте в курсе последних тенденций.</p>
+            <form class="newsletter-form">
+              <input
+                type="email"
+                data-i18n="form_email_lbl"
+                placeholder="Email"
+                required
+              />
+              <button
+                type="submit"
+                class="btn btn-primary btn-small"
+                data-i18n="btn_sub"
+              >
+                Подписаться
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p data-i18n="ftr_rights">© 2026 Amara Group. Все права защищены.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+    <script src="js/animations.js" defer></script>
+    <script src="js/portfolio.js" defer></script>
+  </body>
+</html>

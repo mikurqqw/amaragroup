@@ -1,0 +1,24 @@
+{
+  "projects": [
+    {
+      "category": "private",
+      "alt": "Свадьба",
+      "image": "https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=600"
+    },
+    {
+      "category": "corporate",
+      "alt": "Конференция",
+      "image": "https://images.unsplash.com/photo-1511578314322-379afb476865?w=600"
+    },
+    {
+      "category": "brand",
+      "alt": "Экспо",
+      "image": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600"
+    },
+    {
+      "category": "yacht",
+      "alt": "Яхта",
+      "image": "https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?w=600"
+    }
+  ]
+}

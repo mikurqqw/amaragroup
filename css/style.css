@@ -1,18 +1,18 @@
 /* =========================================
-   ОСНОВНЫЕ ПЕРЕМЕННЫЕ И НАСТРОЙКИ (DARK THEME)
+   ОСНОВНЫЕ НАСТРОЙКИ (DARK THEME)
 ========================================= */
 :root {
   --bg-main: #0a0a0a;
   --bg-card: #111111;
   --bg-card-hover: #1a1a1a;
   --text-main: #ffffff;
-  --text-muted: rgba(255, 255, 255, 0.6);
+  --text-muted: #999999;
   --gradient: linear-gradient(135deg, #e8385a 0%, #f5a623 100%);
   --divider: rgba(255, 255, 255, 0.1);
-
   --font-main: "Montserrat", sans-serif;
 }
 
+/* Жесткий сброс базовых стилей браузера */
 * {
   margin: 0;
   padding: 0;
@@ -21,12 +21,22 @@
 html {
   scroll-behavior: smooth;
 }
-
 body.dark-theme {
   font-family: var(--font-main);
   color: var(--text-main);
   background-color: var(--bg-main);
   overflow-x: hidden;
+}
+
+/* ФИКС ССЫЛОК (убирает синий цвет и подчеркивание) */
+a {
+  text-decoration: none !important;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+ul,
+li {
+  list-style: none;
 }
 
 .container {
@@ -38,13 +48,11 @@ body.dark-theme {
 .text-center {
   text-align: center;
 }
-.section-dark {
-  padding: 6rem 0;
-  background-color: var(--bg-main);
+.mt-2 {
+  margin-top: 1.5rem;
 }
-.border-top-bottom {
-  border-top: 1px solid var(--divider);
-  border-bottom: 1px solid var(--divider);
+.pt-0 {
+  padding-top: 0 !important;
 }
 
 /* Типографика */
@@ -52,16 +60,35 @@ h1,
 h2,
 h3,
 h4 {
-  font-weight: 700;
+  font-weight: 800;
   text-transform: uppercase;
   line-height: 1.2;
+  margin-bottom: 1rem;
+}
+p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
 }
 .section-title {
   font-size: 2.5rem;
   margin-bottom: 3rem;
-  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-top: -2rem;
+  margin-bottom: 4rem;
+  text-transform: none;
+  font-weight: 500;
 }
 .gradient-text {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+.gradient-icon {
   background: var(--gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -71,7 +98,7 @@ h4 {
 .btn-gradient {
   display: inline-block;
   background: var(--gradient);
-  color: #fff;
+  color: #fff !important;
   border: none;
   padding: 1rem 2.5rem;
   border-radius: 50px;
@@ -82,24 +109,21 @@ h4 {
   transition:
     opacity 0.3s ease,
     transform 0.3s ease;
-  text-decoration: none;
+  text-align: center;
 }
 .btn-gradient:hover {
   opacity: 0.9;
   transform: translateY(-2px);
-  color: #fff;
 }
 
-/* =========================================
-   ПЛАВАЮЩИЕ СОЦСЕТИ
-========================================= */
+/* ПЛАВАЮЩИЕ СОЦСЕТИ */
 .floating-socials {
   position: fixed;
   bottom: 30px;
   right: 30px;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 10px;
   z-index: 9999;
 }
 .floating-socials a {
@@ -111,21 +135,14 @@ h4 {
   justify-content: center;
   color: #fff;
   font-size: 1.5rem;
-  text-decoration: none;
   transition: transform 0.3s;
 }
 .floating-socials a:hover {
   transform: scale(1.1);
+  color: #fff !important;
 }
 .fs-inst {
-  background: linear-gradient(
-    45deg,
-    #f09433 0%,
-    #e6683c 25%,
-    #dc2743 50%,
-    #cc2366 75%,
-    #bc1888 100%
-  );
+  background: linear-gradient(45deg, #f09433 0%, #dc2743 50%, #bc1888 100%);
 }
 .fs-yt {
   background: #ff0000;
@@ -137,7 +154,7 @@ h4 {
 /* =========================================
    НАВИГАЦИЯ
 ========================================= */
-.navbar.dark-nav {
+.navbar {
   position: fixed;
   top: 0;
   width: 100%;
@@ -145,16 +162,16 @@ h4 {
   background: rgba(10, 10, 10, 0.95);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--divider);
-  padding: 1rem 0;
+  padding: 1.5rem 0;
   transition: all 0.3s ease;
+}
+.navbar.scrolled {
+  padding: 1rem 0;
 }
 .nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 2rem;
 }
 .nav-logo {
   height: 40px;
@@ -164,12 +181,10 @@ h4 {
   gap: 2rem;
 }
 .nav-links a {
-  color: var(--text-main);
-  text-decoration: none;
   font-size: 0.85rem;
   font-weight: 600;
   text-transform: uppercase;
-  transition: color 0.3s;
+  letter-spacing: 1px;
 }
 .nav-links a:hover,
 .nav-links a.active {
@@ -181,29 +196,97 @@ h4 {
   gap: 1.5rem;
 }
 .nav-phone {
-  color: var(--text-main);
   font-weight: 700;
-  text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 .hamburger {
   display: none;
   background: none;
   border: none;
-  color: var(--text-main);
+  color: #fff;
   font-size: 1.5rem;
   cursor: pointer;
 }
 
+/* Свитчер языков */
+.lang-switcher select {
+  background: transparent;
+  color: #fff;
+  border: 1px solid var(--divider);
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-family: var(--font-main);
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+}
+.lang-switcher select option {
+  background: var(--bg-main);
+  color: #fff;
+}
+
+/* Мобильное меню */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(10, 10, 10, 0.98);
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  transform: translateY(-100%);
+}
+.mobile-menu.active {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0);
+}
+.close-menu {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+}
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+}
+.mobile-nav-links a {
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
 /* =========================================
-   HERO (ВИДЕО)
+   ОСНОВНЫЕ СЕКЦИИ
 ========================================= */
+section {
+  padding: 6rem 0;
+}
+
+/* 1. HERO */
 .hero-dark {
   position: relative;
   height: 100vh;
   display: flex;
-  align-items: flex-end; /* Текст снизу */
-  padding-bottom: 5rem;
+  align-items: center;
+  justify-content: flex-start;
   overflow: hidden;
 }
 .hero-video {
@@ -224,144 +307,196 @@ h4 {
   background: rgba(0, 0, 0, 0.6);
   z-index: 2;
 }
-.hero-content-bottom {
+.hero-content {
   position: relative;
   z-index: 3;
   width: 100%;
+  text-align: center;
 }
-.hero-content-bottom h1 {
+.hero-content h1 {
   font-size: 4rem;
-  max-width: 900px;
-  margin-bottom: 1rem;
+  max-width: 1000px;
+  margin: 0 auto 1.5rem;
+  line-height: 1.1;
 }
-.hero-content-bottom p {
+.hero-content p {
   font-size: 1.2rem;
-  color: var(--text-muted);
-  max-width: 600px;
-  margin-bottom: 2rem;
+  color: var(--text-main);
+  margin-bottom: 3rem;
 }
 .hero-features {
   display: flex;
-  gap: 2rem;
+  justify-content: center;
+  gap: 3rem;
 }
 .hf-item {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-weight: 700;
-  font-size: 0.9rem;
+  font-weight: 800;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 .hf-item i {
-  color: #f5a623;
+  font-size: 1.5rem;
 }
 
-/* =========================================
-   ВНЕ ШАБЛОНОВ
-========================================= */
+/* 2. ВНЕ ШАБЛОНОВ */
 .oob-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 2rem;
+  align-items: stretch;
 }
-.oob-left h3 {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
-  color: #e8385a;
-}
-.cycle-steps {
+.cycle-header {
+  border: 1px solid var(--divider);
+  border-bottom: none;
+  padding: 2rem;
+  font-size: 1.2rem;
+  font-weight: 800;
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
   align-items: center;
-  font-weight: 600;
-  font-size: 0.9rem;
+  gap: 15px;
 }
-.cycle-steps i {
+.cycle-flow {
+  border: 1px solid var(--divider);
+  padding: 3rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+}
+.c-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.c-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--text-muted);
+  transition: 0.3s;
+}
+.c-item:hover .c-icon {
+  color: #fff;
+  background: var(--gradient);
+}
+.c-item span {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.c-arrow {
   color: var(--text-muted);
   font-size: 0.8rem;
-}
-.cycle-steps span {
-  padding: 10px 20px;
-  border: 1px solid var(--divider);
-  border-radius: 30px;
 }
 .oob-right {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
+  justify-content: space-between;
 }
-.oob-card {
+.r-card {
+  background: var(--bg-card);
+  padding: 1.5rem 2rem;
+  border-radius: 8px;
   display: flex;
   align-items: center;
   gap: 20px;
-  padding: 20px;
-  background: var(--bg-card);
-  border-radius: 12px;
-  transition: transform 0.3s;
+  transition: background 0.3s;
 }
-.oob-card:hover {
-  transform: translateX(10px);
+.r-card:hover {
   background: var(--bg-card-hover);
 }
-.oob-card i {
+.r-card i {
   font-size: 2rem;
-  background: var(--gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
-.oob-card h4 {
+.r-card h4 {
+  margin-bottom: 0.3rem;
   font-size: 1.1rem;
+}
+.r-card p {
   margin: 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-transform: none;
+  font-weight: 500;
+}
+.outline-card {
+  border: 1px solid var(--divider);
+  background: transparent;
+}
+.premium-flex {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
 }
 
-/* =========================================
-   МЫ ДЕЛАЕМ (Плитки)
-========================================= */
-.wwd-grid {
+/* 3. МЫ ДЕЛАЕМ */
+.wd-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
 }
-.wwd-card {
+.wd-card {
   position: relative;
-  height: 300px;
-  border-radius: 16px;
+  height: 320px;
+  border-radius: 12px;
   overflow: hidden;
   display: flex;
   align-items: flex-end;
   padding: 2rem;
-  text-decoration: none;
-  background-size: cover;
-  background-position: center;
+  background: var(--bg-card);
+  text-align: left;
 }
-.wwd-overlay {
+.wd-card img {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2));
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   z-index: 1;
+  transition: transform 0.5s;
+}
+.wd-card:hover img {
+  transform: scale(1.05);
+}
+.wd-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, transparent 80%);
+  z-index: 2;
   transition: background 0.3s;
 }
-.wwd-card:hover .wwd-overlay {
+.wd-card:hover .wd-overlay {
   background: linear-gradient(
     to top,
     rgba(232, 56, 90, 0.9),
     rgba(0, 0, 0, 0.4)
   );
 }
-.wwd-card h3 {
+.wd-card h3 {
   position: relative;
-  z-index: 2;
-  color: #fff;
-  font-size: 1.3rem;
+  z-index: 3;
+  font-size: 1.2rem;
   margin: 0;
+  width: 80%;
 }
-.circle-arrow {
+.wd-btn {
   position: absolute;
   top: 20px;
   right: 20px;
-  z-index: 2;
-  width: 40px;
-  height: 40px;
+  z-index: 3;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   background: var(--gradient);
   display: flex;
@@ -369,20 +504,25 @@ h4 {
   justify-content: center;
   color: #fff;
   transition: transform 0.3s;
+  font-size: 1.1rem;
 }
-.wwd-card:hover .circle-arrow {
-  transform: scale(1.1) rotate(45deg);
+.wd-card:hover .wd-btn {
+  transform: scale(1.1) rotate(-45deg);
 }
-.wwd-card.text-only {
-  background: var(--bg-card);
+.text-only {
   align-items: center;
   justify-content: center;
   text-align: center;
+  border: 1px solid var(--divider);
+}
+.text-only h3 {
+  width: 100%;
+  text-align: center;
+  font-size: 1.3rem;
+  line-height: 1.5;
 }
 
-/* =========================================
-   ФОРМА ЗАЯВКИ
-========================================= */
+/* 4. ФОРМА ЗАЯВКИ */
 .lead-form-section {
   position: relative;
   padding: 8rem 0;
@@ -392,7 +532,7 @@ h4 {
 .lead-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.85);
 }
 .relative {
   position: relative;
@@ -404,16 +544,17 @@ h4 {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
 }
 .lead-form input {
-  padding: 1rem 1.5rem;
+  padding: 1.2rem 2rem;
   border-radius: 50px;
   border: 1px solid var(--divider);
   background: rgba(255, 255, 255, 0.05);
   color: #fff;
   font-family: var(--font-main);
+  font-size: 1rem;
   width: 100%;
   outline: none;
   transition: border-color 0.3s;
@@ -422,54 +563,104 @@ h4 {
   border-color: #e8385a;
 }
 
-/* =========================================
-   СЛАЙДЕРЫ (Услуги и Клиенты)
-========================================= */
-.swiper {
-  width: 100%;
-  padding-bottom: 2rem;
+/* 5. НАШИ УСЛУГИ (Swiper) */
+.services-slider-section {
+  padding-bottom: 3rem;
+}
+.srv-slide {
+  background: var(--bg-card);
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 5rem;
 }
 .srv-slide img {
   width: 100%;
-  height: 250px;
+  height: 280px;
   object-fit: cover;
-  border-radius: 12px;
-  margin-bottom: 1rem;
 }
-.srv-slide h3 {
-  font-size: 1.1rem;
-  text-align: center;
-}
-
-.client-slide {
+.srv-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
   background: var(--bg-card);
-  height: 120px;
-  border-radius: 12px;
+}
+.srv-info h3 {
+  font-size: 1.1rem;
+  margin: 0;
+}
+.srv-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff;
+  color: #000;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  transition: all 0.3s;
+  font-size: 1rem;
 }
-.client-slide img {
-  max-width: 100%;
-  max-height: 100%;
-  filter: grayscale(100%) brightness(200%);
-  opacity: 0.6;
-  transition: 0.3s;
+.srv-slide:hover .srv-btn {
+  background: var(--gradient);
+  color: #fff;
+  transform: rotate(-45deg);
 }
-.client-slide:hover img {
-  filter: grayscale(0%) brightness(100%);
-  opacity: 1;
+.swiper-pagination {
+  position: static !important;
+  margin-top: 3rem;
+}
+.swiper-pagination-bullet {
+  background: #555 !important;
+  opacity: 1 !important;
+  width: 12px;
+  height: 12px;
+}
+.swiper-pagination-bullet-active {
+  background: #e8385a !important;
 }
 
-/* =========================================
-   ПРОЕКТЫ
-========================================= */
-.ps-flex {
-  display: flex;
-  justify-content: space-between;
+/* 6. 1897 ПРОЕКТОВ */
+.projects-stats {
+  padding: 5rem 0;
+  border-top: 1px solid var(--divider);
+  border-bottom: 1px solid var(--divider);
+}
+.ps-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
   align-items: center;
 }
+.ps-left h2 {
+  font-size: 3.5rem;
+  text-align: left;
+  text-transform: none;
+  line-height: 1.2;
+  margin: 0;
+  font-weight: 800;
+}
+.ps-right {
+  text-align: left;
+  font-weight: 500;
+}
+.ps-right p {
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+  color: var(--text-muted);
+}
+.ps-right strong {
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+/* 7. ГАЛЕРЕЯ */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -479,7 +670,7 @@ h4 {
   position: relative;
   border-radius: 12px;
   overflow: hidden;
-  aspect-ratio: 4/5;
+  aspect-ratio: 3/4;
 }
 .gal-card img {
   width: 100%;
@@ -497,8 +688,7 @@ h4 {
   width: 100%;
   padding: 1.5rem;
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
-  color: #fff;
-  font-weight: 700;
+  font-weight: 800;
   transform: translateY(100%);
   transition: transform 0.3s;
 }
@@ -506,19 +696,21 @@ h4 {
   transform: translateY(0);
 }
 
-/* =========================================
-   О КОМПАНИИ & КАК РАБОТАЕМ
-========================================= */
+/* 8. О КОМПАНИИ */
 .ac-flex {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 4rem;
+  align-items: center;
 }
 .ac-img img {
   width: 100%;
   border-radius: 16px;
+  object-fit: cover;
+  height: 400px;
 }
 
+/* 9. КАК МЫ РАБОТАЕМ */
 .hww-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -526,8 +718,8 @@ h4 {
 }
 .hww-card {
   background: var(--bg-card);
-  padding: 2.5rem;
-  border-radius: 16px;
+  padding: 3rem 2rem;
+  border-radius: 12px;
   text-align: center;
   border: 1px solid transparent;
   transition: border-color 0.3s;
@@ -536,44 +728,83 @@ h4 {
   border-color: #e8385a;
 }
 .hww-card i {
-  font-size: 2.5rem;
-  color: #e8385a;
+  font-size: 3rem;
   margin-bottom: 1.5rem;
 }
+.hww-card h4 {
+  font-size: 1.1rem;
+  margin: 0;
+}
 
-/* =========================================
-   КОМАНДА
-========================================= */
+/* 10. КОМАНДА */
 .team-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
 }
 .team-img {
-  width: 200px;
-  height: 200px;
+  width: 220px;
+  height: 220px;
   margin: 0 auto 1.5rem;
   border-radius: 50%;
   background-size: cover;
   background-position: center;
   border: 3px solid var(--divider);
-  transition: border-color 0.3s;
+  filter: grayscale(100%);
+  transition:
+    filter 0.4s,
+    border-color 0.4s;
 }
 .team-card:hover .team-img {
+  filter: grayscale(0%);
   border-color: #e8385a;
+}
+.team-card h4 {
+  margin-bottom: 0.5rem;
 }
 .team-card p {
   color: #f5a623;
   font-weight: 600;
   font-size: 0.9rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* 11. НАМ ДОВЕРЯЮТ */
+.client-slide {
+  background: var(--bg-card);
+  height: 140px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.client-slide img {
+  max-width: 80%;
+  max-height: 80%;
+  filter: grayscale(100%) opacity(0.5);
+  transition: 0.3s;
+}
+.client-slide:hover img {
+  filter: grayscale(0%) opacity(1);
+}
+.brand-placeholder {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-muted);
+  transition: 0.3s;
+}
+.client-slide:hover .brand-placeholder {
+  color: #fff;
 }
 
 /* =========================================
-   FOOTER (ТЁМНЫЙ)
+   FOOTER
 ========================================= */
 .footer-dark {
   background: #050505;
-  padding: 4rem 0 2rem;
+  padding: 5rem 0 2rem;
   border-top: 1px solid var(--divider);
 }
 .footer-top {
@@ -582,75 +813,203 @@ h4 {
   align-items: center;
   border-bottom: 1px solid var(--divider);
   padding-bottom: 2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 }
 .ft-phone {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 800;
-  color: #fff;
-  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 15px;
   margin-right: 2rem;
 }
 .ft-email {
   color: var(--text-muted);
-  text-decoration: none;
+  font-size: 1.1rem;
 }
 .social-links-gradient {
   display: flex;
-  gap: 1rem;
+  gap: 15px;
 }
 .social-links-gradient a {
-  width: 45px;
-  height: 45px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   background: var(--bg-card);
   color: #fff;
-  text-decoration: none;
+  font-size: 1.3rem;
   transition: 0.3s;
 }
 .social-links-gradient a:hover {
   background: var(--gradient);
-  transform: translateY(-3px);
+  transform: translateY(-4px);
 }
-
 .footer-mid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
+  text-align: left;
 }
 .fm-col h4 {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   color: var(--text-muted);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
 }
 .fm-col a {
   display: block;
-  color: #fff;
-  text-decoration: none;
-  margin-bottom: 1rem;
-  font-weight: 500;
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+  font-size: 0.95rem;
   transition: color 0.3s;
 }
 .fm-col a:hover {
   color: #e8385a;
 }
-
-/* Настройки свитчера языков */
-.lang-switcher select {
-  background: transparent;
-  color: var(--text-main);
-  border: 1px solid var(--divider);
-  border-radius: 6px;
-  padding: 6px 10px;
-  font-family: var(--font-main);
-  outline: none;
-  cursor: pointer;
+.footer-bottom {
+  border-top: 1px solid var(--divider);
+  padding-top: 2rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 500;
 }
-.lang-switcher select option {
+
+/* =========================================
+   ВНУТРЕННИЕ СТРАНИЦЫ
+========================================= */
+.services-full {
+  padding-bottom: 6rem;
+}
+.services-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* Портфолио */
+.portfolio-filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 4rem;
+}
+.filter-btn {
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  border: 1px solid var(--divider);
+  background: transparent;
+  color: #fff;
+  font-family: var(--font-main);
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+.filter-btn:hover,
+.filter-btn.active {
+  background: var(--gradient);
+  border-color: transparent;
+}
+.masonry-grid {
+  columns: 3;
+  column-gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  transition: 0.4s ease;
+}
+.masonry-item img {
+  width: 100%;
+  display: block;
+  transition: transform 0.4s;
+}
+.masonry-item:hover img {
+  transform: scale(1.05);
+}
+.masonry-item.hide {
+  display: none;
+}
+
+/* Контакты (Внутренняя страница) */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 4rem;
+  align-items: start;
+}
+.contact-list {
+  margin-top: 2rem;
+}
+.contact-list li {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.contact-list strong {
+  color: #fff;
+}
+.contact-form-wrap {
+  background: var(--bg-card);
+  padding: 3rem;
+  border-radius: 16px;
+  border: 1px solid var(--divider);
+  text-align: left;
+}
+.form-group {
+  margin-bottom: 1.5rem;
+}
+.form-group label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+.form-advanced input,
+.form-advanced select,
+.form-advanced textarea {
+  width: 100%;
+  padding: 1.2rem;
+  border-radius: 8px;
+  border: 1px solid var(--divider);
+  background: rgba(255, 255, 255, 0.02);
+  color: #fff;
+  font-family: var(--font-main);
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+.form-advanced input:focus,
+.form-advanced select:focus,
+.form-advanced textarea:focus {
+  border-color: #e8385a;
+}
+.form-advanced select option {
   background: var(--bg-main);
-  color: var(--text-main);
+  color: #fff;
+}
+.form-success {
+  margin-top: 1.5rem;
+  text-align: center;
+  color: #25d366;
+  font-weight: 700;
 }

@@ -1,44 +1,47 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // 1. Навигация и скролл
+  // 1. Навигация при скролле
   const navbar = document.querySelector(".navbar");
-  const isAlwaysScrolled = navbar.classList.contains("scrolled");
-
-  window.addEventListener("scroll", () => {
-    if (!isAlwaysScrolled) {
-      if (window.scrollY > 80) {
+  if (navbar) {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
         navbar.classList.add("scrolled");
-        navbar.style.background = "rgba(10, 10, 10, 0.95)";
       } else {
         navbar.classList.remove("scrolled");
-        navbar.style.background = "rgba(10, 10, 10, 0.5)";
       }
-    }
-  });
+    });
+  }
 
   // 2. Мобильное меню
   const mobileMenu = document.querySelector(".mobile-menu");
-  const closeBtn = document.querySelector(".close-menu");
   const hamburger = document.querySelector(".hamburger");
-  const mobileLinks = document.querySelectorAll(".mobile-nav-links a");
+  const closeBtn = document.querySelector(".close-menu");
+  const links = document.querySelectorAll(".mobile-nav-links a");
 
-  if (hamburger)
-    hamburger.addEventListener("click", () =>
-      mobileMenu.classList.add("active"),
-    );
-  if (closeBtn)
-    closeBtn.addEventListener("click", () =>
-      mobileMenu.classList.remove("active"),
-    );
-  mobileLinks.forEach((link) =>
-    link.addEventListener("click", () => mobileMenu.classList.remove("active")),
-  );
+  if (hamburger && mobileMenu) {
+    hamburger.addEventListener("click", () => {
+      mobileMenu.classList.add("active");
+    });
+  }
 
-  // 3. Формы (Имитация отправки)
+  if (closeBtn && mobileMenu) {
+    closeBtn.addEventListener("click", () => {
+      mobileMenu.classList.remove("active");
+    });
+  }
+
+  links.forEach((link) => {
+    link.addEventListener("click", () => {
+      if (mobileMenu) mobileMenu.classList.remove("active");
+    });
+  });
+
+  // 3. Формы (Имитация отправки и анимация кнопки)
   document.querySelectorAll("form").forEach((form) => {
     form.addEventListener("submit", (e) => {
-      if (!form.classList.contains("newsletter-form")) {
-        e.preventDefault();
-        const btn = form.querySelector('button[type="submit"]');
+      e.preventDefault();
+      const btn = form.querySelector('button[type="submit"]');
+
+      if (btn) {
         const originalText = btn.innerText;
         btn.disabled = true;
         btn.innerText = "Отправка...";
@@ -46,22 +49,36 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(() => {
           form.reset();
           btn.innerText = "Успешно!";
-          btn.style.background = "#25D366";
+          btn.style.background = "#25D366"; // Зеленый цвет WhatsApp для успеха
+
+          // Показ сообщения об успехе (если есть на странице контактов)
+          const successMsg = form.parentElement.querySelector(".form-success");
+          if (successMsg) {
+            successMsg.classList.remove("hidden");
+            setTimeout(() => successMsg.classList.add("hidden"), 5000);
+          }
+
+          // Возврат кнопки в исходное состояние
           setTimeout(() => {
             btn.disabled = false;
             btn.innerText = originalText;
-            btn.style.background = "";
+            btn.style.background = ""; // Возвращаем градиент из CSS
           }, 3000);
         }, 1000);
       }
     });
   });
 
-  // 4. Инициализация Swiper (Услуги)
+  // 4. Слайдер "Наши услуги" (С точками внизу)
   if (document.querySelector(".services-swiper")) {
     new Swiper(".services-swiper", {
       slidesPerView: 1,
       spaceBetween: 20,
+      loop: false,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
       breakpoints: {
         640: { slidesPerView: 2 },
         1024: { slidesPerView: 4 },
@@ -69,14 +86,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 5. Инициализация Swiper (Клиенты / Логотипы)
+  // 5. Слайдер "Нам доверяют" (Бесконечная автопрокрутка логотипов)
   if (document.querySelector(".clients-swiper")) {
     new Swiper(".clients-swiper", {
       slidesPerView: 2,
       spaceBetween: 20,
       loop: true,
       autoplay: {
-        delay: 2500,
+        delay: 2000,
         disableOnInteraction: false,
       },
       breakpoints: {

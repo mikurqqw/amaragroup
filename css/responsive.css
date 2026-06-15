@@ -1,37 +1,62 @@
-/* Мобильное меню */
-.mobile-menu.dark-menu {
-  background: rgba(10, 10, 10, 0.98);
-  backdrop-filter: blur(15px);
-}
-
+/* =========================================
+   АДАПТИВНОСТЬ ДЛЯ ПЛАНШЕТОВ (до 1024px)
+========================================= */
 @media (max-width: 1024px) {
+  /* Сетки */
   .oob-grid,
-  .ac-flex {
+  .ps-grid,
+  .ac-flex,
+  .contact-grid {
     grid-template-columns: 1fr;
-    flex-direction: column;
     gap: 3rem;
+    text-align: center;
   }
-  .wwd-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .hww-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  .wd-grid,
+  .hww-grid,
   .team-grid,
-  .gallery-grid {
+  .gallery-grid,
+  .services-grid-3 {
     grid-template-columns: repeat(2, 1fr);
   }
-  .hero-content-bottom h1 {
+  .masonry-grid {
+    columns: 2;
+  }
+
+  /* Выравнивание текста по центру */
+  .oob-left,
+  .ps-left,
+  .ps-right,
+  .contact-page-info {
+    text-align: center;
+  }
+
+  /* Типографика */
+  .hero-content h1,
+  .ps-left h2 {
     font-size: 3rem;
   }
-  .ps-flex {
-    flex-direction: column;
-    text-align: center;
-    gap: 2rem;
+
+  /* Блок "Полный цикл" */
+  .cycle-flow {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .c-arrow {
+    display: none;
+  } /* Скрываем стрелочки, чтобы блоки переносились мягко */
+
+  /* Футер */
+  .footer-mid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
+/* =========================================
+   АДАПТИВНОСТЬ ДЛЯ СМАРТФОНОВ (до 768px)
+========================================= */
 @media (max-width: 768px) {
+  /* Навигация (включаем гамбургер) */
   .nav-links,
   .nav-phone {
     display: none;
@@ -40,6 +65,21 @@
     display: block;
   }
 
+  /* Типографика */
+  .hero-content h1,
+  .ps-left h2 {
+    font-size: 2.2rem;
+  }
+  .section-title {
+    font-size: 2rem;
+  }
+  .hero-features {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+
+  /* Формы и Футер */
   .lead-form {
     flex-direction: column;
   }
@@ -54,30 +94,88 @@
   }
   .ft-phone {
     margin-right: 0;
-    display: block;
     margin-bottom: 1rem;
+    justify-content: center;
+  }
+  .social-links-gradient {
+    justify-content: center;
   }
 
-  .hero-content-bottom h1 {
-    font-size: 2.2rem;
+  /* Внутренние страницы (Контакты) */
+  .contact-form-wrap {
+    padding: 2rem 1.5rem;
   }
-  .hero-features {
-    flex-direction: column;
-    gap: 1rem;
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .contact-list li {
+    justify-content: center;
+    text-align: left;
+  }
+
+  /* Плавающие соцсети */
+  .floating-socials {
+    bottom: 20px;
+    right: 20px;
+  }
+  .floating-socials a {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
   }
 }
 
+/* =========================================
+   АДАПТИВНОСТЬ ДЛЯ МАЛЕНЬКИХ ЭКРАНОВ (до 480px)
+========================================= */
 @media (max-width: 480px) {
-  .wwd-grid,
+  /* Сбрасываем сетки в одну колонку */
+  .wd-grid,
   .hww-grid,
   .team-grid,
-  .gallery-grid {
+  .gallery-grid,
+  .services-grid-3 {
     grid-template-columns: 1fr;
   }
-  .wwd-card {
-    height: 250px;
+  .masonry-grid {
+    columns: 1;
+  }
+
+  /* Карточки */
+  .wd-card {
+    height: 260px;
+  }
+  .r-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .premium-flex {
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* Отступы и шрифты */
+  section {
+    padding: 4rem 0;
   }
   .section-title {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+  }
+  .hero-content h1 {
     font-size: 1.8rem;
+  }
+
+  /* Кнопки фильтров в Портфолио */
+  .portfolio-filters {
+    flex-direction: column;
+  }
+  .filter-btn {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
   }
 }

@@ -3,66 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Amara Group | Luxury Events</title>
-
-    <meta
-      name="description"
-      content="Amara Group — агентство полного цикла в ОАЭ и Катаре. Организация роскошных свадеб, корпоративных мероприятий, бренд-активаций и аренда яхт."
-    />
-    <meta
-      name="keywords"
-      content="luxury events Dubai, организация мероприятий Дубай, свадьба в Катаре, ивент агентство ОАЭ, корпоративы Доха"
-    />
-    <meta name="author" content="Amara Group" />
-
-    <meta
-      property="og:title"
-      content="Amara Group | Events That Remain Forever In Memory"
-    />
-    <meta
-      property="og:description"
-      content="Полный спектр услуг по организации роскошных мероприятий на территории стран Персидского залива."
-    />
-    <meta
-      property="og:image"
-      content="https://www.amaraevent.com/herobannerpicture.jpg"
-    />
-    <meta property="og:type" content="website" />
-
-    <meta name="robots" content="index, follow" />
+    <title>Услуги | Amara Group</title>
 
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/animations.css" />
     <link rel="stylesheet" href="css/responsive.css" />
 
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-
     <script src="js/translations.js" defer></script>
     <script src="js/i18n.js" defer></script>
     <script src="js/main.js" defer></script>
     <script src="js/animations.js" defer></script>
-    <script src="js/portfolio.js" defer></script>
   </head>
-  <body>
-    <header class="navbar scrolled">
+  <body class="dark-theme">
+    <div class="floating-socials">
+      <a
+        href="https://www.instagram.com/amara.eventgroup/"
+        target="_blank"
+        class="fs-inst"
+        ><i class="fab fa-instagram"></i
+      ></a>
+      <a href="#" target="_blank" class="fs-yt"
+        ><i class="fab fa-youtube"></i
+      ></a>
+      <a href="https://w.app/xpcw7w" target="_blank" class="fs-wa"
+        ><i class="fab fa-whatsapp"></i
+      ></a>
+    </div>
+
+    <header class="navbar dark-nav scrolled">
       <div class="nav-container">
-        <a href="index.html" class="logo-link">
-          <img
-            src="https://www.amaraevent.com/newheroloamara.png"
+        <a href="index.html" class="logo-link"
+          ><img
+            src="https://www.amaraevent.com/newwhotelogoamara.png"
             alt="Amara Group Logo"
-            class="nav-logo logo-dark"
-          />
-        </a>
+            class="nav-logo"
+        /></a>
         <nav class="nav-links">
-          <a href="index.html" data-i18n="nav_home">Главная</a>
-          <a href="index.html#about" data-i18n="nav_about">О нас</a>
+          <a href="index.html" data-i18n="nav_home">Мероприятия</a>
           <a href="services.html" class="active" data-i18n="nav_services"
             >Услуги</a
           >
+          <a href="index.html#about" data-i18n="nav_about">О нас</a>
           <a href="portfolio.html" data-i18n="nav_portfolio">Портфолио</a>
           <a href="contact.html" data-i18n="nav_contact">Контакты</a>
         </nav>
@@ -74,298 +64,231 @@
               <option value="ar">AR</option>
             </select>
           </div>
-          <a
-            href="https://w.app/xpcw7w"
-            target="_blank"
-            class="btn btn-primary"
-            data-i18n="btn_plan"
-            >Запланировать событие</a
+          <a href="tel:+971505325095" class="nav-phone"
+            ><i class="fas fa-phone-alt"></i> +971 50 532 5095</a
           >
-          <button class="hamburger" aria-label="Menu" style="color: #3d1f0d">
-            ☰
-          </button>
+          <button class="hamburger"><i class="fas fa-bars"></i></button>
         </div>
       </div>
     </header>
 
     <div class="mobile-menu">
-      <button class="close-menu">✕</button>
+      <button class="close-menu"><i class="fas fa-times"></i></button>
       <div class="lang-switcher" style="margin-bottom: 2rem">
-        <select
-          class="lang-select"
-          style="
-            color: var(--text-primary);
-            border-color: var(--accent-primary);
-          "
-        >
+        <select class="lang-select">
           <option value="ru">RU</option>
           <option value="en">EN</option>
           <option value="ar">AR</option>
         </select>
       </div>
       <nav class="mobile-nav-links">
-        <a href="index.html" data-i18n="nav_home">Главная</a>
-        <a href="index.html#about" data-i18n="nav_about">О нас</a>
+        <a href="index.html" data-i18n="nav_home">Мероприятия</a>
         <a href="services.html" data-i18n="nav_services">Услуги</a>
+        <a href="index.html#about" data-i18n="nav_about">О нас</a>
         <a href="portfolio.html" data-i18n="nav_portfolio">Портфолио</a>
         <a href="contact.html" data-i18n="nav_contact">Контакты</a>
-        <a
-          href="https://w.app/xpcw7w"
-          target="_blank"
-          class="btn btn-primary mobile-btn"
-          data-i18n="btn_plan"
-          >Запланировать событие</a
+        <a href="tel:+971505325095" class="mobile-phone"
+          ><i class="fas fa-phone-alt"></i> +971 50 532 5095</a
         >
       </nav>
     </div>
 
-    <main class="page-top-padding bg-cream">
+    <main class="page-top-padding section-dark">
       <section class="page-hero text-center">
         <div class="container">
-          <span class="label animate-from-bottom" data-i18n="srv_label"
-            >НАША ЭКСПЕРТИЗА</span
-          >
-          <h1
-            class="animate-from-bottom"
-            style="color: var(--text-primary)"
-            data-i18n="sp_title"
-          >
+          <h1 class="section-title animate-from-bottom" data-i18n="sp_title">
             Полный спектр наших услуг
           </h1>
-          <p
-            class="subtitle animate-from-bottom"
-            style="color: var(--text-secondary)"
-            data-i18n="sp_desc"
-          >
+          <p class="section-subtitle animate-from-bottom" data-i18n="sp_desc">
             От роскошных свадеб до масштабных корпоративных форумов — каждое
             событие создается с точностью.
           </p>
         </div>
       </section>
 
-      <section class="services-full">
+      <section class="services-full pt-0">
         <div class="container">
           <div class="services-grid-3 hover-zone">
-            <div class="service-card animate-from-bottom">
-              <div class="icon-box">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                >
-                  <path
-                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
-                  ></path>
-                </svg>
-              </div>
-              <h3 data-i18n="srv_1_t">Частные праздники</h3>
-              <p data-i18n="srv_1_d">
+            <div
+              class="r-card animate-from-bottom"
+              style="
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 2rem;
+              "
+            >
+              <i class="fas fa-heart gradient-text"></i>
+              <h3 data-i18n="srv_1_t" style="margin-top: 1rem">
+                Частные праздники
+              </h3>
+              <p
+                data-i18n="srv_1_d"
+                style="color: var(--text-muted); font-size: 0.9rem"
+              >
                 От уютных свадеб до юбилейных дат — мы продумываем каждую
                 деталь.
               </p>
-              <a href="contact.html" class="link-arrow" data-i18n="srv_more"
+              <a
+                href="contact.html"
+                class="gradient-text"
+                data-i18n="srv_more"
+                style="
+                  font-weight: 600;
+                  text-decoration: none;
+                  margin-top: auto;
+                "
                 >Подробнее →</a
               >
             </div>
             <div
-              class="service-card animate-from-bottom"
-              style="transition-delay: 0.1s"
+              class="r-card animate-from-bottom"
+              style="
+                transition-delay: 0.1s;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 2rem;
+              "
             >
-              <div class="icon-box">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                >
-                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-                </svg>
-              </div>
-              <h3 data-i18n="srv_2_t">Корпоративные события</h3>
-              <p data-i18n="srv_2_d">
+              <i class="fas fa-briefcase gradient-text"></i>
+              <h3 data-i18n="srv_2_t" style="margin-top: 1rem">
+                Корпоративные события
+              </h3>
+              <p
+                data-i18n="srv_2_d"
+                style="color: var(--text-muted); font-size: 0.9rem"
+              >
                 Конференции, гала-ужины и запуски продуктов.
               </p>
-              <a href="contact.html" class="link-arrow" data-i18n="srv_more"
+              <a
+                href="contact.html"
+                class="gradient-text"
+                data-i18n="srv_more"
+                style="
+                  font-weight: 600;
+                  text-decoration: none;
+                  margin-top: auto;
+                "
                 >Подробнее →</a
               >
             </div>
             <div
-              class="service-card animate-from-bottom"
-              style="transition-delay: 0.2s"
+              class="r-card animate-from-bottom"
+              style="
+                transition-delay: 0.2s;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 2rem;
+              "
             >
-              <div class="icon-box">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                >
-                  <path
-                    d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"
-                  ></path>
-                  <path
-                    d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"
-                  ></path>
-                </svg>
-              </div>
-              <h3 data-i18n="srv_3_t">Активации бренда</h3>
-              <p data-i18n="srv_3_d">Выставки и иммерсивные события.</p>
-              <a href="contact.html" class="link-arrow" data-i18n="srv_more"
-                >Подробнее →</a
+              <i class="fas fa-bullhorn gradient-text"></i>
+              <h3 data-i18n="srv_3_t" style="margin-top: 1rem">
+                Активации бренда
+              </h3>
+              <p
+                data-i18n="srv_3_d"
+                style="color: var(--text-muted); font-size: 0.9rem"
               >
-            </div>
-            <div class="service-card animate-from-bottom">
-              <div class="icon-box">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                >
-                  <path
-                    d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"
-                  ></path>
-                </svg>
-              </div>
-              <h3 data-i18n="srv_5_t">Аренда яхт</h3>
-              <p data-i18n="srv_5_d">Эксклюзивные праздники на борту.</p>
-              <a href="contact.html" class="link-arrow" data-i18n="srv_more"
+                Выставки и иммерсивные события.
+              </p>
+              <a
+                href="contact.html"
+                class="gradient-text"
+                data-i18n="srv_more"
+                style="
+                  font-weight: 600;
+                  text-decoration: none;
+                  margin-top: auto;
+                "
                 >Подробнее →</a
               >
             </div>
             <div
-              class="service-card animate-from-bottom"
-              style="transition-delay: 0.1s"
+              class="r-card animate-from-bottom"
+              style="
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 2rem;
+              "
             >
-              <div class="icon-box">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                >
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <line x1="2" y1="12" x2="22" y2="12"></line>
-                  <path
-                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
-                  ></path>
-                </svg>
-              </div>
-              <h3 data-i18n="srv_6_t">Культурные события</h3>
-              <p data-i18n="srv_6_d">
+              <i class="fas fa-ship gradient-text"></i>
+              <h3 data-i18n="srv_5_t" style="margin-top: 1rem">Аренда яхт</h3>
+              <p
+                data-i18n="srv_5_d"
+                style="color: var(--text-muted); font-size: 0.9rem"
+              >
+                Эксклюзивные праздники на борту.
+              </p>
+              <a
+                href="contact.html"
+                class="gradient-text"
+                data-i18n="srv_more"
+                style="
+                  font-weight: 600;
+                  text-decoration: none;
+                  margin-top: auto;
+                "
+                >Подробнее →</a
+              >
+            </div>
+            <div
+              class="r-card animate-from-bottom"
+              style="
+                transition-delay: 0.1s;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 2rem;
+              "
+            >
+              <i class="fas fa-mask gradient-text"></i>
+              <h3 data-i18n="srv_6_t" style="margin-top: 1rem">
+                Культурные события
+              </h3>
+              <p
+                data-i18n="srv_6_d"
+                style="color: var(--text-muted); font-size: 0.9rem"
+              >
                 Курируемые встречи и социальные мероприятия.
               </p>
-              <a href="contact.html" class="link-arrow" data-i18n="srv_more"
+              <a
+                href="contact.html"
+                class="gradient-text"
+                data-i18n="srv_more"
+                style="
+                  font-weight: 600;
+                  text-decoration: none;
+                  margin-top: auto;
+                "
                 >Подробнее →</a
               >
             </div>
             <div
-              class="service-card animate-from-bottom"
-              style="transition-delay: 0.2s"
+              class="r-card animate-from-bottom"
+              style="
+                transition-delay: 0.2s;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 2rem;
+              "
             >
-              <div class="icon-box">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                >
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
-                  ></polygon>
-                </svg>
-              </div>
-              <h3 data-i18n="srv_7_t">Инсентив-программы</h3>
-              <p data-i18n="srv_7_d">
+              <i class="fas fa-trophy gradient-text"></i>
+              <h3 data-i18n="srv_7_t" style="margin-top: 1rem">
+                Инсентив-программы
+              </h3>
+              <p
+                data-i18n="srv_7_d"
+                style="color: var(--text-muted); font-size: 0.9rem"
+              >
                 Программы поощрения для мотивации команд.
               </p>
-              <a href="contact.html" class="link-arrow" data-i18n="srv_more"
-                >Подробнее →</a
-              >
-            </div>
-            <div class="service-card animate-from-bottom">
-              <div class="icon-box">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                >
-                  <path
-                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-1-1.73l-7-4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4A2 2 0 0 0 21 16z"
-                  ></path>
-                  <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-                  <line x1="12" y1="22.08" x2="12" y2="12"></line>
-                </svg>
-              </div>
-              <h3 data-i18n="srv_8_t">Декор и инсталляции</h3>
-              <p data-i18n="srv_8_d">Премиальные декоративные элементы.</p>
-              <a href="contact.html" class="link-arrow" data-i18n="srv_more"
-                >Подробнее →</a
-              >
-            </div>
-            <div
-              class="service-card animate-from-bottom"
-              style="transition-delay: 0.1s"
-            >
-              <div class="icon-box">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                >
-                  <path d="M20 9v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9" />
-                  <path d="M9 22V12h6v10M2 10.6L12 2l10 8.6" />
-                </svg>
-              </div>
-              <h3 data-i18n="srv_9_t">Мебель и лаунж-зоны</h3>
-              <p data-i18n="srv_9_d">Изысканные лаунж-решения.</p>
-              <a href="contact.html" class="link-arrow" data-i18n="srv_more"
-                >Подробнее →</a
-              >
-            </div>
-            <div
-              class="service-card animate-from-bottom"
-              style="transition-delay: 0.2s"
-            >
-              <div class="icon-box">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                >
-                  <path
-                    d="M9 18h6M10 22h4M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"
-                  ></path>
-                </svg>
-              </div>
-              <h3 data-i18n="srv_10_t">Освещение и сцена</h3>
-              <p data-i18n="srv_10_d">
-                Оборудование для концертов и постановок.
-              </p>
-              <a href="contact.html" class="link-arrow" data-i18n="srv_more"
+              <a
+                href="contact.html"
+                class="gradient-text"
+                data-i18n="srv_more"
+                style="
+                  font-weight: 600;
+                  text-decoration: none;
+                  margin-top: auto;
+                "
                 >Подробнее →</a
               >
             </div>
@@ -374,131 +297,61 @@
       </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer-dark">
       <div class="container">
-        <div class="footer-grid">
-          <div class="footer-col animate-from-bottom">
-            <img
-              src="https://www.amaraevent.com/newwhotelogoamara.png"
-              alt="Amara Group"
-              class="footer-logo"
-            />
-            <p class="footer-tagline" data-i18n="ftr_tagline">
-              Каждое событие — это история, которую вы рассказываете миру.
-            </p>
-            <div class="social-links">
-              <a
-                href="https://www.instagram.com/amara.eventgroup/"
-                target="_blank"
-                class="social-icon"
-                ><svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                  <path
-                    d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
-                  ></path>
-                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg
-              ></a>
-              <a
-                href="https://www.linkedin.com/company/amara-event-groups/"
-                target="_blank"
-                class="social-icon"
-                ><svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path
-                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
-                  ></path>
-                  <rect x="2" y="9" width="4" height="12"></rect>
-                  <circle cx="4" cy="4" r="2"></circle></svg
-              ></a>
-              <a
-                href="https://www.facebook.com/people/Amara-Event-Group/61588950360241/?rdid=UpHWcttzKWzYfDXJ"
-                target="_blank"
-                class="social-icon"
-                ><svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path
-                    d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
-                  ></path></svg
-              ></a>
-            </div>
-          </div>
-          <div
-            class="footer-col animate-from-bottom"
-            style="transition-delay: 0.1s"
-          >
-            <h4 data-i18n="ftr_quick">БЫСТРЫЕ ССЫЛКИ</h4>
-            <a href="services.html" data-i18n="nav_services">Наши услуги</a>
-            <a href="portfolio.html" data-i18n="ftr_past">Прошедшие события</a>
-            <a href="index.html#about" data-i18n="ftr_test">Отзывы клиентов</a>
-            <a href="index.html#about" data-i18n="ftr_team">О команде</a>
-          </div>
-          <div
-            class="footer-col animate-from-bottom"
-            style="transition-delay: 0.2s"
-          >
-            <h4 data-i18n="ftr_srv">УСЛУГИ</h4>
-            <a href="services.html" data-i18n="srv_1_t">Частные праздники</a>
-            <a href="services.html" data-i18n="srv_2_t"
-              >Корпоративные события</a
+        <div class="footer-top">
+          <div class="ft-left">
+            <a href="tel:+971505325095" class="ft-phone"
+              ><i class="fas fa-phone-alt"></i> +971 50 532 5095</a
             >
-            <a href="services.html" data-i18n="srv_3_t">Активации бренда</a>
-            <a href="services.html" data-i18n="srv_5_t">Аренда яхт</a>
+            <a href="mailto:info@amaraevent.com" class="ft-email"
+              >info@amaraevent.com</a
+            >
           </div>
-          <div
-            class="footer-col animate-from-bottom"
-            style="transition-delay: 0.3s"
-          >
-            <h4 data-i18n="ftr_news">РАССЫЛКА</h4>
-            <p data-i18n="ftr_news_d">Будьте в курсе последних тенденций.</p>
-            <form class="newsletter-form">
-              <input
-                type="email"
-                data-i18n="form_email_lbl"
-                placeholder="Email"
-                required
-              />
-              <button
-                type="submit"
-                class="btn btn-primary btn-small"
-                data-i18n="btn_sub"
-              >
-                Подписаться
-              </button>
-            </form>
+          <div class="ft-right social-links-gradient">
+            <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://w.app/xpcw7w" target="_blank"
+              ><i class="fab fa-whatsapp"></i
+            ></a>
+            <a href="#" target="_blank"
+              ><i class="fab fa-telegram-plane"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/amara.eventgroup/"
+              target="_blank"
+              ><i class="fab fa-instagram"></i
+            ></a>
           </div>
         </div>
-        <div class="footer-bottom">
+        <div class="footer-mid">
+          <div class="fm-col">
+            <h4 data-i18n="ftr_nav">МЕРОПРИЯТИЯ</h4>
+            <a href="portfolio.html" data-i18n="wwd_wedding"
+              >Организация свадьбы</a
+            >
+            <a href="portfolio.html" data-i18n="srv_2_t"
+              >Корпоративные мероприятия</a
+            >
+            <a href="portfolio.html" data-i18n="wwd_teambuilding"
+              >Тимбилдинги</a
+            >
+          </div>
+          <div class="fm-col">
+            <h4 data-i18n="ftr_srv">НАШИ УСЛУГИ</h4>
+            <a href="services.html" data-i18n="srv_tech">Шоу-программа</a>
+            <a href="services.html" data-i18n="srv_photo">Фото- видео съемка</a>
+            <a href="services.html" data-i18n="srv_loc">Место проведения</a>
+          </div>
+          <div class="fm-col">
+            <h4 data-i18n="ftr_company">КОМПАНИЯ</h4>
+            <a href="index.html#about" data-i18n="nav_about">О нас</a>
+            <a href="contact.html" data-i18n="nav_contact">Контакты</a>
+          </div>
+        </div>
+        <div class="footer-bottom text-center">
           <p data-i18n="ftr_rights">© 2026 Amara Group. Все права защищены.</p>
         </div>
       </div>
     </footer>
-
-    <script src="js/main.js" defer></script>
-    <script src="js/animations.js" defer></script>
   </body>
 </html>

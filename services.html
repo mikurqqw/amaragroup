@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Услуги | Amara Group</title>
-
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
@@ -16,7 +15,6 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/animations.css" />
     <link rel="stylesheet" href="css/responsive.css" />
-
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <script src="js/translations.js" defer></script>
     <script src="js/i18n.js" defer></script>
@@ -31,23 +29,19 @@
         class="fs-inst"
         ><i class="fab fa-instagram"></i
       ></a>
-      <a href="#" target="_blank" class="fs-yt"
-        ><i class="fab fa-youtube"></i
-      ></a>
       <a href="https://w.app/xpcw7w" target="_blank" class="fs-wa"
         ><i class="fab fa-whatsapp"></i
       ></a>
     </div>
 
-    <header class="navbar dark-nav scrolled">
-      <div class="nav-container">
-        <a href="index.html" class="logo-link"
+    <header class="header scrolled">
+      <div class="header-container container">
+        <a href="index.html" class="logo"
           ><img
             src="https://www.amaraevent.com/newwhotelogoamara.png"
-            alt="Amara Group Logo"
-            class="nav-logo"
+            alt="Amara Group"
         /></a>
-        <nav class="nav-links">
+        <nav class="nav-menu">
           <a href="index.html" data-i18n="nav_home">Мероприятия</a>
           <a href="services.html" class="active" data-i18n="nav_services"
             >Услуги</a
@@ -56,7 +50,7 @@
           <a href="portfolio.html" data-i18n="nav_portfolio">Портфолио</a>
           <a href="contact.html" data-i18n="nav_contact">Контакты</a>
         </nav>
-        <div class="nav-actions">
+        <div class="header-right">
           <div class="lang-switcher">
             <select class="lang-select">
               <option value="ru">RU</option>
@@ -64,291 +58,112 @@
               <option value="ar">AR</option>
             </select>
           </div>
-          <a href="tel:+971505325095" class="nav-phone"
+          <a href="tel:+971505325095" class="phone"
             ><i class="fas fa-phone-alt"></i> +971 50 532 5095</a
           >
-          <button class="hamburger"><i class="fas fa-bars"></i></button>
+          <div class="hamburger"><i class="fas fa-bars"></i></div>
         </div>
       </div>
     </header>
 
-    <div class="mobile-menu">
-      <button class="close-menu"><i class="fas fa-times"></i></button>
-      <div class="lang-switcher" style="margin-bottom: 2rem">
-        <select class="lang-select">
-          <option value="ru">RU</option>
-          <option value="en">EN</option>
-          <option value="ar">AR</option>
-        </select>
-      </div>
-      <nav class="mobile-nav-links">
-        <a href="index.html" data-i18n="nav_home">Мероприятия</a>
-        <a href="services.html" data-i18n="nav_services">Услуги</a>
-        <a href="index.html#about" data-i18n="nav_about">О нас</a>
-        <a href="portfolio.html" data-i18n="nav_portfolio">Портфолио</a>
-        <a href="contact.html" data-i18n="nav_contact">Контакты</a>
-        <a href="tel:+971505325095" class="mobile-phone"
-          ><i class="fas fa-phone-alt"></i> +971 50 532 5095</a
-        >
-      </nav>
-    </div>
-
-    <main class="page-top-padding section-dark">
-      <section class="page-hero text-center">
-        <div class="container">
-          <h1 class="section-title animate-from-bottom" data-i18n="sp_title">
-            Полный спектр наших услуг
-          </h1>
-          <p class="section-subtitle animate-from-bottom" data-i18n="sp_desc">
-            От роскошных свадеб до масштабных корпоративных форумов — каждое
-            событие создается с точностью.
-          </p>
-        </div>
-      </section>
-
-      <section class="services-full pt-0">
-        <div class="container">
-          <div class="services-grid-3 hover-zone">
-            <div
-              class="r-card animate-from-bottom"
-              style="
-                flex-direction: column;
-                align-items: flex-start;
-                padding: 2rem;
-              "
-            >
-              <i class="fas fa-heart gradient-text"></i>
-              <h3 data-i18n="srv_1_t" style="margin-top: 1rem">
-                Частные праздники
-              </h3>
-              <p
-                data-i18n="srv_1_d"
-                style="color: var(--text-muted); font-size: 0.9rem"
-              >
-                От уютных свадеб до юбилейных дат — мы продумываем каждую
-                деталь.
-              </p>
-              <a
-                href="contact.html"
-                class="gradient-text"
-                data-i18n="srv_more"
-                style="
-                  font-weight: 600;
-                  text-decoration: none;
-                  margin-top: auto;
-                "
-                >Подробнее →</a
-              >
-            </div>
-            <div
-              class="r-card animate-from-bottom"
-              style="
-                transition-delay: 0.1s;
-                flex-direction: column;
-                align-items: flex-start;
-                padding: 2rem;
-              "
-            >
-              <i class="fas fa-briefcase gradient-text"></i>
-              <h3 data-i18n="srv_2_t" style="margin-top: 1rem">
-                Корпоративные события
-              </h3>
-              <p
-                data-i18n="srv_2_d"
-                style="color: var(--text-muted); font-size: 0.9rem"
-              >
-                Конференции, гала-ужины и запуски продуктов.
-              </p>
-              <a
-                href="contact.html"
-                class="gradient-text"
-                data-i18n="srv_more"
-                style="
-                  font-weight: 600;
-                  text-decoration: none;
-                  margin-top: auto;
-                "
-                >Подробнее →</a
-              >
-            </div>
-            <div
-              class="r-card animate-from-bottom"
-              style="
-                transition-delay: 0.2s;
-                flex-direction: column;
-                align-items: flex-start;
-                padding: 2rem;
-              "
-            >
-              <i class="fas fa-bullhorn gradient-text"></i>
-              <h3 data-i18n="srv_3_t" style="margin-top: 1rem">
-                Активации бренда
-              </h3>
-              <p
-                data-i18n="srv_3_d"
-                style="color: var(--text-muted); font-size: 0.9rem"
-              >
-                Выставки и иммерсивные события.
-              </p>
-              <a
-                href="contact.html"
-                class="gradient-text"
-                data-i18n="srv_more"
-                style="
-                  font-weight: 600;
-                  text-decoration: none;
-                  margin-top: auto;
-                "
-                >Подробнее →</a
-              >
-            </div>
-            <div
-              class="r-card animate-from-bottom"
-              style="
-                flex-direction: column;
-                align-items: flex-start;
-                padding: 2rem;
-              "
-            >
-              <i class="fas fa-ship gradient-text"></i>
-              <h3 data-i18n="srv_5_t" style="margin-top: 1rem">Аренда яхт</h3>
-              <p
-                data-i18n="srv_5_d"
-                style="color: var(--text-muted); font-size: 0.9rem"
-              >
-                Эксклюзивные праздники на борту.
-              </p>
-              <a
-                href="contact.html"
-                class="gradient-text"
-                data-i18n="srv_more"
-                style="
-                  font-weight: 600;
-                  text-decoration: none;
-                  margin-top: auto;
-                "
-                >Подробнее →</a
-              >
-            </div>
-            <div
-              class="r-card animate-from-bottom"
-              style="
-                transition-delay: 0.1s;
-                flex-direction: column;
-                align-items: flex-start;
-                padding: 2rem;
-              "
-            >
-              <i class="fas fa-mask gradient-text"></i>
-              <h3 data-i18n="srv_6_t" style="margin-top: 1rem">
-                Культурные события
-              </h3>
-              <p
-                data-i18n="srv_6_d"
-                style="color: var(--text-muted); font-size: 0.9rem"
-              >
-                Курируемые встречи и социальные мероприятия.
-              </p>
-              <a
-                href="contact.html"
-                class="gradient-text"
-                data-i18n="srv_more"
-                style="
-                  font-weight: 600;
-                  text-decoration: none;
-                  margin-top: auto;
-                "
-                >Подробнее →</a
-              >
-            </div>
-            <div
-              class="r-card animate-from-bottom"
-              style="
-                transition-delay: 0.2s;
-                flex-direction: column;
-                align-items: flex-start;
-                padding: 2rem;
-              "
-            >
-              <i class="fas fa-trophy gradient-text"></i>
-              <h3 data-i18n="srv_7_t" style="margin-top: 1rem">
-                Инсентив-программы
-              </h3>
-              <p
-                data-i18n="srv_7_d"
-                style="color: var(--text-muted); font-size: 0.9rem"
-              >
-                Программы поощрения для мотивации команд.
-              </p>
-              <a
-                href="contact.html"
-                class="gradient-text"
-                data-i18n="srv_more"
-                style="
-                  font-weight: 600;
-                  text-decoration: none;
-                  margin-top: auto;
-                "
-                >Подробнее →</a
-              >
-            </div>
+    <main class="section-padding">
+      <section class="container">
+        <h1 class="section-title text-center" data-i18n="sp_title">
+          Полный спектр наших услуг
+        </h1>
+        <div class="wd-grid">
+          <div
+            class="r-card"
+            style="flex-direction: column; align-items: flex-start"
+          >
+            <i class="fas fa-heart gradient-text"></i>
+            <h3 data-i18n="srv_1_t" style="margin-top: 1rem">
+              Частные праздники
+            </h3>
+            <p data-i18n="srv_1_d">
+              От уютных свадеб до юбилейных дат — мы продумываем каждую деталь.
+            </p>
+          </div>
+          <div
+            class="r-card"
+            style="flex-direction: column; align-items: flex-start"
+          >
+            <i class="fas fa-briefcase gradient-text"></i>
+            <h3 data-i18n="srv_2_t" style="margin-top: 1rem">
+              Корпоративные мероприятия
+            </h3>
+            <p data-i18n="srv_2_d">
+              Конференции, гала-ужины и запуски продуктов.
+            </p>
+          </div>
+          <div
+            class="r-card"
+            style="flex-direction: column; align-items: flex-start"
+          >
+            <i class="fas fa-bullhorn gradient-text"></i>
+            <h3 data-i18n="srv_3_t" style="margin-top: 1rem">
+              Активации бренда
+            </h3>
+            <p data-i18n="srv_3_d">Выставки и иммерсивные события.</p>
+          </div>
+          <div
+            class="r-card"
+            style="flex-direction: column; align-items: flex-start"
+          >
+            <i class="fas fa-ship gradient-text"></i>
+            <h3 data-i18n="srv_5_t" style="margin-top: 1rem">Аренда яхт</h3>
+            <p data-i18n="srv_5_d">Эксклюзивные праздники на борту.</p>
+          </div>
+          <div
+            class="r-card"
+            style="flex-direction: column; align-items: flex-start"
+          >
+            <i class="fas fa-mask gradient-text"></i>
+            <h3 data-i18n="srv_6_t" style="margin-top: 1rem">
+              Культурные события
+            </h3>
+            <p data-i18n="srv_6_d">
+              Курируемые встречи и социальные мероприятия.
+            </p>
+          </div>
+          <div
+            class="r-card"
+            style="flex-direction: column; align-items: flex-start"
+          >
+            <i class="fas fa-trophy gradient-text"></i>
+            <h3 data-i18n="srv_7_t" style="margin-top: 1rem">
+              Инсентив-программы
+            </h3>
+            <p data-i18n="srv_7_d">Программы поощрения для мотивации команд.</p>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="footer-dark">
+    <footer class="footer">
       <div class="container">
         <div class="footer-top">
-          <div class="ft-left">
-            <a href="tel:+971505325095" class="ft-phone"
+          <div class="f-contact">
+            <a href="tel:+971505325095" class="f-phone"
               ><i class="fas fa-phone-alt"></i> +971 50 532 5095</a
             >
-            <a href="mailto:info@amaraevent.com" class="ft-email"
+            <a href="mailto:info@amaraevent.com" class="f-email"
               >info@amaraevent.com</a
             >
           </div>
-          <div class="ft-right social-links-gradient">
-            <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
-            <a href="https://w.app/xpcw7w" target="_blank"
+          <div class="f-socials">
+            <a href="#" class="fs-circle"><i class="fab fa-youtube"></i></a>
+            <a href="https://w.app/xpcw7w" class="fs-circle"
               ><i class="fab fa-whatsapp"></i
-            ></a>
-            <a href="#" target="_blank"
-              ><i class="fab fa-telegram-plane"></i
             ></a>
             <a
               href="https://www.instagram.com/amara.eventgroup/"
-              target="_blank"
+              class="fs-circle"
               ><i class="fab fa-instagram"></i
             ></a>
           </div>
         </div>
-        <div class="footer-mid">
-          <div class="fm-col">
-            <h4 data-i18n="ftr_nav">МЕРОПРИЯТИЯ</h4>
-            <a href="portfolio.html" data-i18n="wwd_wedding"
-              >Организация свадьбы</a
-            >
-            <a href="portfolio.html" data-i18n="srv_2_t"
-              >Корпоративные мероприятия</a
-            >
-            <a href="portfolio.html" data-i18n="wwd_teambuilding"
-              >Тимбилдинги</a
-            >
-          </div>
-          <div class="fm-col">
-            <h4 data-i18n="ftr_srv">НАШИ УСЛУГИ</h4>
-            <a href="services.html" data-i18n="srv_tech">Шоу-программа</a>
-            <a href="services.html" data-i18n="srv_photo">Фото- видео съемка</a>
-            <a href="services.html" data-i18n="srv_loc">Место проведения</a>
-          </div>
-          <div class="fm-col">
-            <h4 data-i18n="ftr_company">КОМПАНИЯ</h4>
-            <a href="index.html#about" data-i18n="nav_about">О нас</a>
-            <a href="contact.html" data-i18n="nav_contact">Контакты</a>
-          </div>
-        </div>
-        <div class="footer-bottom text-center">
+        <div class="footer-bottom">
           <p data-i18n="ftr_rights">© 2026 Amara Group. Все права защищены.</p>
         </div>
       </div>

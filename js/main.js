@@ -1,17 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // 1. Навигация при скролле
-  const navbar = document.querySelector(".navbar");
-  if (navbar) {
+  const header = document.getElementById("header");
+  if (header) {
     window.addEventListener("scroll", () => {
       if (window.scrollY > 50) {
-        navbar.classList.add("scrolled");
+        header.classList.add("scrolled");
       } else {
-        navbar.classList.remove("scrolled");
+        header.classList.remove("scrolled");
       }
     });
   }
 
-  // 2. Мобильное меню
   const mobileMenu = document.querySelector(".mobile-menu");
   const hamburger = document.querySelector(".hamburger");
   const closeBtn = document.querySelector(".close-menu");
@@ -35,7 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // 3. Формы (Имитация отправки и анимация кнопки)
   document.querySelectorAll("form").forEach((form) => {
     form.addEventListener("submit", (e) => {
       e.preventDefault();
@@ -49,27 +46,24 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(() => {
           form.reset();
           btn.innerText = "Успешно!";
-          btn.style.background = "#25D366"; // Зеленый цвет WhatsApp для успеха
+          btn.style.background = "#25D366";
 
-          // Показ сообщения об успехе (если есть на странице контактов)
           const successMsg = form.parentElement.querySelector(".form-success");
           if (successMsg) {
             successMsg.classList.remove("hidden");
             setTimeout(() => successMsg.classList.add("hidden"), 5000);
           }
 
-          // Возврат кнопки в исходное состояние
           setTimeout(() => {
             btn.disabled = false;
             btn.innerText = originalText;
-            btn.style.background = ""; // Возвращаем градиент из CSS
+            btn.style.background = "";
           }, 3000);
         }, 1000);
       }
     });
   });
 
-  // 4. Слайдер "Наши услуги" (С точками внизу)
   if (document.querySelector(".services-swiper")) {
     new Swiper(".services-swiper", {
       slidesPerView: 1,
@@ -86,7 +80,38 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 5. Слайдер "Нам доверяют" (Бесконечная автопрокрутка логотипов)
+  if (document.querySelector(".gallery-swiper")) {
+    new Swiper(".gallery-swiper", {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        640: { slidesPerView: 2 },
+        1024: { slidesPerView: 4 },
+      },
+    });
+  }
+
+  if (document.querySelector(".team-swiper")) {
+    new Swiper(".team-swiper", {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: false,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        640: { slidesPerView: 2 },
+        1024: { slidesPerView: 4 },
+      },
+    });
+  }
+
   if (document.querySelector(".clients-swiper")) {
     new Swiper(".clients-swiper", {
       slidesPerView: 2,
@@ -98,7 +123,7 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       breakpoints: {
         640: { slidesPerView: 3 },
-        1024: { slidesPerView: 5 },
+        1024: { slidesPerView: 6 },
       },
     });
   }

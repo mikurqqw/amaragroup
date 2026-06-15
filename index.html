@@ -121,12 +121,11 @@
     </div>
 
     <main>
-      <section
-        class="hero"
-        style="
-          background-image: url(&quot;https://www.amaraevent.com/herobannerpicture.jpg&quot;);
-        "
-      >
+      <section class="hero">
+        <video autoplay muted loop playsinline class="hero-video">
+          <source src="assets/video/hero.mp4" type="video/mp4" />
+        </video>
+        <div class="hero-overlay"></div>
         <div class="hero-content">
           <h1 class="animate-from-bottom" data-i18n="hero_title">
             События, которые остаются
@@ -500,6 +499,21 @@
                   />
                 </div>
               </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label data-i18n="form_type">Тип события</label>
+                  <input
+                    type="text"
+                    data-i18n="pl_type"
+                    placeholder="Свадьба, Гала, Активация..."
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label data-i18n="form_date">Дата события</label>
+                  <input type="date" required />
+                </div>
+              </div>
               <div class="form-group">
                 <label data-i18n="form_loc">Локация</label>
                 <select required>
@@ -513,6 +527,14 @@
                   </option>
                   <option value="Other" data-i18n="loc_other">Другое</option>
                 </select>
+              </div>
+              <div class="form-group">
+                <label data-i18n="form_msg">Опишите ваше событие</label>
+                <textarea
+                  data-i18n="pl_msg"
+                  placeholder="Опишите ваше видение..."
+                  rows="4"
+                ></textarea>
               </div>
               <button
                 type="submit"
@@ -660,8 +682,5 @@
         </div>
       </div>
     </footer>
-
-    <script src="js/main.js" defer></script>
-    <script src="js/animations.js" defer></script>
   </body>
 </html>

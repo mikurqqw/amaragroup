@@ -41,15 +41,15 @@
     <script src="js/animations.js" defer></script>
     <script src="js/portfolio.js" defer></script>
   </head>
-  <body class="luxury-dark">
+  <body class="luxury-light">
     <div class="floating-socials">
       <a
         href="https://www.instagram.com/amara.eventgroup/"
         target="_blank"
-        class="fs-icon"
+        class="fs-icon fs-inst"
         ><i class="fab fa-instagram"></i
       ></a>
-      <a href="https://wa.me/77758240988" target="_blank" class="fs-icon"
+      <a href="https://wa.me/77758240988" target="_blank" class="fs-icon fs-wa"
         ><i class="fab fa-whatsapp"></i
       ></a>
     </div>
@@ -107,12 +107,9 @@
 
     <main>
       <section class="hero-luxury">
-        <div
-          class="hero-bg"
-          style="
-            background-image: url(&quot;https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=2000&auto=format&fit=crop&quot;);
-          "
-        ></div>
+        <video autoplay muted loop playsinline class="hero-video">
+          <source src="assets/video/hero.mp4" type="video/mp4" />
+        </video>
         <div class="hero-overlay"></div>
         <div class="container hero-content text-center">
           <h1 class="hero-title animate-fade-up" data-i18n="hero_title_new">
@@ -567,6 +564,7 @@
               src="https://www.amaraevent.com/newwhotelogoamara.png"
               alt="Amara Group"
               class="f-logo"
+              style="filter: invert(1)"
             />
             <p class="f-desc" data-i18n="about_p1">
               Агентство полного цикла с глубокими корнями в странах Персидского
@@ -593,9 +591,13 @@
               <a
                 href="https://www.instagram.com/amara.eventgroup/"
                 target="_blank"
+                class="f-inst-icon"
                 ><i class="fab fa-instagram"></i
               ></a>
-              <a href="https://wa.me/77758240988" target="_blank"
+              <a
+                href="https://wa.me/77758240988"
+                target="_blank"
+                class="f-wa-icon"
                 ><i class="fab fa-whatsapp"></i
               ></a>
             </div>

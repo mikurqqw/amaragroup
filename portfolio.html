@@ -27,13 +27,13 @@
       }
       .filter-btn {
         background: transparent;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        color: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        color: var(--text-main);
         padding: 1rem 2.5rem;
         border-radius: 50px;
         font-family: var(--font-text);
         font-size: 0.85rem;
-        font-weight: 500;
+        font-weight: 600;
         text-transform: uppercase;
         letter-spacing: 1.5px;
         cursor: pointer;
@@ -54,6 +54,7 @@
         border-radius: var(--radius);
         overflow: hidden;
         position: relative;
+        box-shadow: var(--shadow);
       }
       .masonry-item img {
         width: 100%;
@@ -92,15 +93,15 @@
     <script src="js/animations.js" defer></script>
     <script src="js/portfolio.js" defer></script>
   </head>
-  <body class="luxury-dark">
+  <body class="luxury-light">
     <div class="floating-socials">
       <a
         href="https://www.instagram.com/amara.eventgroup/"
         target="_blank"
-        class="fs-icon"
+        class="fs-icon fs-inst"
         ><i class="fab fa-instagram"></i
       ></a>
-      <a href="https://w.app/xpcw7w" target="_blank" class="fs-icon"
+      <a href="https://wa.me/77758240988" target="_blank" class="fs-icon fs-wa"
         ><i class="fab fa-whatsapp"></i
       ></a>
     </div>
@@ -168,7 +169,7 @@
               max-width: 600px;
               margin: -2rem auto 4rem;
               font-size: 1.1rem;
-              color: var(--text-main);
+              color: var(--text-muted);
             "
           >
             Подборка событий, которые мы провели в странах Персидского залива.
@@ -217,6 +218,7 @@
               src="https://www.amaraevent.com/newwhotelogoamara.png"
               alt="Amara Group"
               class="f-logo"
+              style="filter: invert(1)"
             />
             <p class="f-desc" data-i18n="about_p1">
               Агентство полного цикла с глубокими корнями в странах Персидского
@@ -243,9 +245,13 @@
               <a
                 href="https://www.instagram.com/amara.eventgroup/"
                 target="_blank"
+                class="f-inst-icon"
                 ><i class="fab fa-instagram"></i
               ></a>
-              <a href="https://w.app/xpcw7w" target="_blank"
+              <a
+                href="https://wa.me/77758240988"
+                target="_blank"
+                class="f-wa-icon"
                 ><i class="fab fa-whatsapp"></i
               ></a>
             </div>

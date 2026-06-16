@@ -1,22 +1,27 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const animClasses = [
-    ".animate-from-left",
-    ".animate-from-right",
-    ".animate-from-bottom",
-    ".animate-fade",
-    ".animate-scale",
-  ];
-  const elements = document.querySelectorAll(animClasses.join(", "));
-  const observer = new IntersectionObserver(
-    (entries, obs) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          obs.unobserve(entry.target);
-        }
-      });
-    },
-    { root: null, rootMargin: "0px", threshold: 0.15 },
+  const observerOptions = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.15,
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  const elementsToAnimate = document.querySelectorAll(
+    ".animate-fade-up, .section-title, .luxury-card, .feature-luxury-card, .srv-lux-card, .gal-lux-card, .review-card, .team-lux-card, .contact-box, .oob-360-block",
   );
-  elements.forEach((el) => observer.observe(el));
+
+  elementsToAnimate.forEach((el) => {
+    if (!el.classList.contains("animate-fade-up")) {
+      el.classList.add("animate-fade-up");
+    }
+    observer.observe(el);
+  });
 });

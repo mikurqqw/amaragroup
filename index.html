@@ -3,17 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Amara Group | Организация мероприятий</title>
+    <title>Amara Group | Premium Event Agency</title>
 
     <meta
       name="description"
-      content="Amara Group — агентство полного цикла в ОАЭ и Катаре. Организация роскошных свадеб, корпоративных мероприятий, тимбилдингов и шоу-программ."
+      content="Amara Group — премиальное агентство полного цикла в ОАЭ и Катаре. Эксклюзивные мероприятия, роскошные свадьбы и VIP-корпоративы."
     />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
       rel="stylesheet"
     />
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -38,15 +41,15 @@
     <script src="js/animations.js" defer></script>
     <script src="js/portfolio.js" defer></script>
   </head>
-  <body class="dark-theme">
+  <body class="luxury-dark">
     <div class="floating-socials">
       <a
         href="https://www.instagram.com/amara.eventgroup/"
         target="_blank"
-        class="fs-inst"
+        class="fs-icon"
         ><i class="fab fa-instagram"></i
       ></a>
-      <a href="https://w.app/xpcw7w" target="_blank" class="fs-wa"
+      <a href="https://w.app/xpcw7w" target="_blank" class="fs-icon"
         ><i class="fab fa-whatsapp"></i
       ></a>
     </div>
@@ -76,7 +79,7 @@
             </select>
           </div>
           <a href="tel:+971505325095" class="phone"
-            ><i class="fas fa-phone-alt"></i> +971 (50) 532-5095</a
+            ><i class="fas fa-phone-alt"></i> +971 50 532 5095</a
           >
           <div class="hamburger"><i class="fas fa-bars"></i></div>
         </div>
@@ -103,447 +106,31 @@
     </div>
 
     <main>
-      <section class="hero">
-        <video autoplay muted loop playsinline class="hero-video">
-          <source src="assets/video/hero.mp4" type="video/mp4" />
-        </video>
+      <section class="hero-luxury">
+        <div
+          class="hero-bg"
+          style="
+            background-image: url(&quot;https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=2000&auto=format&fit=crop&quot;);
+          "
+        ></div>
         <div class="hero-overlay"></div>
-        <div class="container hero-content">
-          <h1 data-i18n="hero_title_new">
-            ОРГАНИЗАЦИЯ МЕРОПРИЯТИЙ<br />ЛЮБОГО ФОРМАТА!
+        <div class="container hero-content text-center">
+          <h1 class="hero-title animate-fade-up" data-i18n="hero_title_new">
+            ОРГАНИЗАЦИЯ МЕРОПРИЯТИЙ ЛЮБОГО ФОРМАТА
           </h1>
-          <div class="hero-features">
-            <div class="hf-item">
-              <i class="fas fa-star gradient-text"></i>
-              <span data-i18n="hf_quality">КАЧЕСТВО</span>
-            </div>
-            <div class="hf-item">
-              <i class="fas fa-lightbulb gradient-text"></i>
-              <span data-i18n="hf_creative">КРЕАТИВ</span>
-            </div>
-            <div class="hf-item">
-              <i class="fas fa-stopwatch gradient-text"></i>
-              <span data-i18n="hf_time">ВРЕМЯ</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="out-of-box section-padding">
-        <div class="container">
-          <h2 class="section-title text-center" data-i18n="out_box_title">
-            МЫ СОЗДАЕМ СОБЫТИЯ ВНЕ ШАБЛОНОВ
-          </h2>
-          <div class="oob-grid">
-            <div class="oob-left">
-              <div class="oob-box-title">
-                <span data-i18n="oob_360" class="gradient-text"
-                  >ПОЛНЫЙ ЦИКЛ (360 ГРАДУСОВ)</span
-                >
-              </div>
-              <div class="oob-steps">
-                <div class="step-item">
-                  <div class="step-icon"><i class="far fa-lightbulb"></i></div>
-                  <span data-i18n="c_idea">Идея</span>
-                </div>
-                <i class="fas fa-arrow-right step-arrow"></i>
-                <div class="step-item">
-                  <div class="step-icon"><i class="fas fa-magic"></i></div>
-                  <span data-i18n="c_creative">Креатив</span>
-                </div>
-                <i class="fas fa-arrow-right step-arrow"></i>
-                <div class="step-item">
-                  <div class="step-icon"><i class="fas fa-box-open"></i></div>
-                  <span data-i18n="c_prod">Продакшн</span>
-                </div>
-                <i class="fas fa-arrow-right step-arrow"></i>
-                <div class="step-item">
-                  <div class="step-icon">
-                    <i class="fas fa-clipboard-check"></i>
-                  </div>
-                  <span data-i18n="c_realize">Реализация</span>
-                </div>
-                <i class="fas fa-arrow-right step-arrow"></i>
-                <div class="step-item">
-                  <div class="step-icon"><i class="fas fa-chart-bar"></i></div>
-                  <span data-i18n="c_analytics">Аналитика</span>
-                </div>
-              </div>
-            </div>
-            <div class="oob-right">
-              <div class="r-card">
-                <div class="r-card-icon">
-                  <i class="fas fa-globe gradient-text"></i>
-                </div>
-                <div class="r-card-text">
-                  <h4 data-i18n="oob_c1">МАСШТАБ И ГЕОГРАФИЯ</h4>
-                </div>
-              </div>
-              <div class="r-card">
-                <div class="r-card-icon">
-                  <i class="fas fa-users gradient-text"></i>
-                </div>
-                <div class="r-card-text">
-                  <h4 data-i18n="oob_c2">КОМАНДА ЭКСПЕРТОВ</h4>
-                </div>
-              </div>
-              <div class="r-card outline">
-                <div class="r-card-text">
-                  <h4 data-i18n="oob_c3" class="gradient-text">
-                    PREMIUM СЕРВИС
-                  </h4>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="what-we-do section-padding">
-        <div class="container">
-          <h2 class="section-title text-center" data-i18n="wwd_title">
-            МЫ ДЕЛАЕМ
-          </h2>
-          <div class="wd-grid">
-            <a href="services.html" class="wd-card">
-              <img
-                src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=600"
-                alt="Corporate"
-              />
-              <div class="wd-overlay"></div>
-              <div class="wd-content">
-                <h3 data-i18n="srv_2_t">Корпоративные<br />мероприятия</h3>
-                <div class="wd-arrow"><i class="fas fa-arrow-right"></i></div>
-              </div>
-            </a>
-            <a href="services.html" class="wd-card">
-              <img
-                src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=600"
-                alt="Wedding"
-              />
-              <div class="wd-overlay"></div>
-              <div class="wd-content">
-                <h3 data-i18n="wwd_wedding">Организация свадьбы</h3>
-                <div class="wd-arrow"><i class="fas fa-arrow-right"></i></div>
-              </div>
-            </a>
-            <a href="services.html" class="wd-card">
-              <img
-                src="https://images.unsplash.com/photo-1556761175-5973dc0f32b7?w=600"
-                alt="Team building"
-              />
-              <div class="wd-overlay"></div>
-              <div class="wd-content">
-                <h3 data-i18n="wwd_teambuilding">Тимбилдинги</h3>
-                <div class="wd-arrow"><i class="fas fa-arrow-right"></i></div>
-              </div>
-            </a>
-            <a href="services.html" class="wd-card">
-              <img
-                src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=600"
-                alt="Birthday"
-              />
-              <div class="wd-overlay"></div>
-              <div class="wd-content">
-                <h3 data-i18n="wwd_birthday">Дни рождения</h3>
-                <div class="wd-arrow"><i class="fas fa-arrow-right"></i></div>
-              </div>
-            </a>
-            <a href="services.html" class="wd-card">
-              <img
-                src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600"
-                alt="Theme party"
-              />
-              <div class="wd-overlay"></div>
-              <div class="wd-content">
-                <h3 data-i18n="wwd_party">Тематические вечеринки</h3>
-                <div class="wd-arrow"><i class="fas fa-arrow-right"></i></div>
-              </div>
-            </a>
-            <a href="portfolio.html" class="wd-card text-card">
-              <h3 data-i18n="wwd_catalog" class="gradient-text">
-                СМОТРЕТЬ<br />КАТАЛОГ<br />МЕРОПРИЯТИЙ
-              </h3>
-              <div class="wd-arrow"><i class="fas fa-arrow-right"></i></div>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section class="lead-form-section" id="contact">
-        <div class="container">
-          <div class="lead-content text-center">
-            <h2 class="lead-title" data-i18n="lead_title">
-              ОСТАВЬТЕ ЗАЯВКУ, МЫ ПОДБЕРЕМ ДЛЯ ВАС ЛУЧШЕЕ ПРЕДЛОЖЕНИЕ!
-            </h2>
-            <form class="lead-form">
-              <input
-                type="text"
-                data-i18n="pl_name"
-                placeholder="Имя"
-                required
-              />
-              <input type="tel" placeholder="Телефон" required />
-              <button type="submit" class="btn-gradient" data-i18n="btn_send">
-                Отправить
-              </button>
-            </form>
-          </div>
-        </div>
-      </section>
-
-      <section class="services-slider-section section-padding">
-        <div class="container">
-          <h2 class="section-title text-center" data-i18n="srv_label">
-            НАШИ УСЛУГИ
-          </h2>
-          <div class="swiper services-swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide srv-card">
-                <img
-                  src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=600"
-                  alt="Tech"
-                />
-                <div class="srv-content">
-                  <h3 data-i18n="srv_tech">Шоу-программа</h3>
-                  <div class="srv-arrow">
-                    <i class="fas fa-arrow-right"></i>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide srv-card">
-                <img
-                  src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=600"
-                  alt="Photo"
-                />
-                <div class="srv-content">
-                  <h3 data-i18n="srv_photo">Фото- видео съемка</h3>
-                  <div class="srv-arrow">
-                    <i class="fas fa-arrow-right"></i>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide srv-card">
-                <img
-                  src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600"
-                  alt="Loc"
-                />
-                <div class="srv-content">
-                  <h3 data-i18n="srv_loc">Место проведения</h3>
-                  <div class="srv-arrow">
-                    <i class="fas fa-arrow-right"></i>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide srv-card">
-                <img
-                  src="https://images.unsplash.com/photo-1621263764928-df1444c5e859?w=600"
-                  alt="Host"
-                />
-                <div class="srv-content">
-                  <h3 data-i18n="srv_host">Ведущие</h3>
-                  <div class="srv-arrow">
-                    <i class="fas fa-arrow-right"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-pagination"></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="stats-section section-padding">
-        <div class="container stats-container">
-          <div class="stats-left">
-            <h2 data-i18n="stats_title" class="gradient-text">
-              МЫ РЕАЛИЗОВАЛИ УЖЕ<br />БОЛЕЕ 1897 ПРОЕКТОВ
-            </h2>
-            <a href="portfolio.html" class="btn-gradient" data-i18n="port_view"
-              >Все проекты</a
+          <p class="hero-subtitle animate-fade-up" data-i18n="hero_desc_new">
+            Мы воплощаем в жизнь абсолютно любое событие на 360 градусов 24/7
+          </p>
+          <div class="hero-actions animate-fade-up">
+            <a href="#contact" class="btn-gold" data-i18n="btn_send"
+              >Связаться с нами</a
             >
           </div>
-          <div class="stats-right">
-            <p>
-              <strong data-i18n="st_p1_s"
-                >1 897+ проектов. И каждый — с характером.</strong
-              >
-            </p>
-            <p data-i18n="st_p2">
-              Мы создаём события, которые не теряются в ленте и не забываются на
-              следующий день.
-            </p>
-            <p data-i18n="st_p3">
-              Наше портфолио — не отчёт, а коллекция сильных кейсов: частные
-              вечеринки, семейные праздники, корпоративы и тимбилдинги,
-              сделанные с идеей и смыслом.
-            </p>
-            <p data-i18n="st_p4">
-              Каждое фото и видео — результат точного продакшна: продуманная
-              концепция, мощный визуал, выверенная шоу-программа и атмосфера,
-              которая работает на эмоции.
-            </p>
-            <p data-i18n="st_p5">
-              AMARA GROUP — когда масштаб, стиль и результат совпадают.
-            </p>
-          </div>
         </div>
       </section>
 
-      <section class="gallery-section section-padding">
-        <div class="container">
-          <h2 class="section-title text-center" data-i18n="gallery_title">
-            ГАЛЕРЕЯ ПРОЕКТОВ
-          </h2>
-          <div class="swiper gallery-swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide gal-card">
-                <img
-                  src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=600"
-                  alt="Gallery"
-                />
-                <div class="gal-info"><h3>Project 1</h3></div>
-              </div>
-              <div class="swiper-slide gal-card">
-                <img
-                  src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=600"
-                  alt="Gallery"
-                />
-                <div class="gal-info"><h3>Project 2</h3></div>
-              </div>
-              <div class="swiper-slide gal-card">
-                <img
-                  src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600"
-                  alt="Gallery"
-                />
-                <div class="gal-info"><h3>Project 3</h3></div>
-              </div>
-              <div class="swiper-slide gal-card">
-                <img
-                  src="https://images.unsplash.com/photo-1561489413-985b06da5bee?w=600"
-                  alt="Gallery"
-                />
-                <div class="gal-info"><h3>Project 4</h3></div>
-              </div>
-            </div>
-            <div class="swiper-pagination"></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="about-section section-padding" id="about">
-        <div class="container about-container">
-          <div class="about-content">
-            <h2 class="section-title" data-i18n="nav_about">О КОМПАНИИ</h2>
-            <p>
-              <strong>AMARA GROUP</strong> —
-              <span data-i18n="about_p1"
-                >агентство полного цикла с глубокими корнями в странах
-                Персидского залива. Мы работаем на стыке роскоши, технологий и
-                культуры.</span
-              >
-            </p>
-            <a
-              href="services.html"
-              class="btn-gradient"
-              data-i18n="srv_more"
-              style="margin-top: 2rem"
-              >Узнать больше</a
-            >
-          </div>
-          <div class="about-image">
-            <img
-              src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800"
-              alt="О компании"
-            />
-          </div>
-        </div>
-      </section>
-
-      <section class="how-we-work section-padding">
-        <div class="container">
-          <h2 class="section-title text-center" data-i18n="hww_title">
-            КАК МЫ РАБОТАЕМ?
-          </h2>
-          <div class="hww-grid">
-            <div class="hww-card">
-              <i class="fas fa-file-alt"></i>
-              <h4 data-i18n="hww_1">Шаг 1. Заявка</h4>
-            </div>
-            <div class="hww-card">
-              <i class="fas fa-coffee"></i>
-              <h4 data-i18n="hww_2">Шаг 2. Встреча</h4>
-            </div>
-            <div class="hww-card">
-              <i class="fas fa-wallet"></i>
-              <h4 data-i18n="hww_3">Шаг 3. Предоплата</h4>
-            </div>
-            <div class="hww-card">
-              <i class="fas fa-search"></i>
-              <h4 data-i18n="hww_4">Шаг 4. Детали</h4>
-            </div>
-            <div class="hww-card">
-              <i class="fas fa-pencil-ruler"></i>
-              <h4 data-i18n="hww_5">Шаг 5. Концепция</h4>
-            </div>
-            <div class="hww-card">
-              <i class="fas fa-glass-cheers"></i>
-              <h4 data-i18n="hww_6">Шаг 6. Мероприятие</h4>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="team-section section-padding">
+      <section class="trust-logos section-padding">
         <div class="container text-center">
-          <h2 class="section-title" data-i18n="team_title">НАША КОМАНДА</h2>
-          <div class="swiper team-swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide team-card">
-                <div
-                  class="team-img"
-                  style="
-                    background-image: url(&quot;https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&grayscale=1&quot;);
-                  "
-                ></div>
-                <h4>Name 1</h4>
-              </div>
-              <div class="swiper-slide team-card">
-                <div
-                  class="team-img"
-                  style="
-                    background-image: url(&quot;https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&grayscale=1&quot;);
-                  "
-                ></div>
-                <h4>Name 2</h4>
-              </div>
-              <div class="swiper-slide team-card">
-                <div
-                  class="team-img"
-                  style="
-                    background-image: url(&quot;https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&grayscale=1&quot;);
-                  "
-                ></div>
-                <h4>Name 3</h4>
-              </div>
-              <div class="swiper-slide team-card">
-                <div
-                  class="team-img"
-                  style="
-                    background-image: url(&quot;https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&grayscale=1&quot;);
-                  "
-                ></div>
-                <h4>Name 4</h4>
-              </div>
-            </div>
-            <div class="swiper-pagination"></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="clients-section section-padding">
-        <div class="container text-center">
-          <h2 class="section-title" data-i18n="trusted_title">НАМ ДОВЕРЯЮТ</h2>
           <div class="swiper clients-swiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide client-logo">
@@ -564,44 +151,430 @@
                   alt="Kaspi"
                 />
               </div>
-              <div class="swiper-slide client-logo"><span>BCC.kz</span></div>
-              <div class="swiper-slide client-logo"><span>Coca-Cola</span></div>
-              <div class="swiper-slide client-logo"><span>JUSAN</span></div>
+              <div class="swiper-slide client-logo">
+                <span class="logo-text">BCC.kz</span>
+              </div>
+              <div class="swiper-slide client-logo">
+                <span class="logo-text">Coca-Cola</span>
+              </div>
+              <div class="swiper-slide client-logo">
+                <span class="logo-text">JUSAN</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats-luxury section-padding">
+        <div class="container text-center">
+          <h2 class="section-title gold-text" data-i18n="stats_title">
+            МЫ РЕАЛИЗОВАЛИ УЖЕ БОЛЕЕ 1897 ПРОЕКТОВ
+          </h2>
+          <div class="stats-text-wrapper">
+            <p class="stats-lead" data-i18n="st_p1_s">
+              1 897+ проектов. И каждый — с характером.
+            </p>
+            <p data-i18n="st_p2">
+              Мы создаём события, которые не теряются в ленте и не забываются на
+              следующий день.
+            </p>
+            <p data-i18n="st_p3">
+              Наше портфолио — не отчёт, а коллекция сильных кейсов: частные
+              вечеринки, семейные праздники, корпоративы и тимбилдинги,
+              сделанные с идеей и смыслом.
+            </p>
+            <p data-i18n="st_p4">
+              Каждое фото и видео — результат точного продакшна: продуманная
+              концепция, мощный визуал, выверенная шоу-программа и атмосфера,
+              которая работает на эмоции.
+            </p>
+            <p class="stats-highlight" data-i18n="st_p5">
+              AMARA GROUP — когда масштаб, стиль и результат совпадают.
+            </p>
+            <div class="stats-btn-wrap">
+              <a
+                href="portfolio.html"
+                class="btn-gold-outline"
+                data-i18n="port_view"
+                >Все проекты</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="what-we-do-luxury section-padding">
+        <div class="container text-center">
+          <h2 class="section-title" data-i18n="wwd_title">МЫ ДЕЛАЕМ</h2>
+          <div class="services-luxury-grid">
+            <a href="services.html" class="luxury-card">
+              <div
+                class="luxury-card-img"
+                style="
+                  background-image: url(&quot;https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=800&auto=format&fit=crop&quot;);
+                "
+              ></div>
+              <div class="luxury-card-overlay"></div>
+              <div class="luxury-card-content">
+                <h3 data-i18n="srv_2_t">Корпоративные мероприятия</h3>
+              </div>
+            </a>
+            <a href="services.html" class="luxury-card">
+              <div
+                class="luxury-card-img"
+                style="
+                  background-image: url(&quot;https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=800&auto=format&fit=crop&quot;);
+                "
+              ></div>
+              <div class="luxury-card-overlay"></div>
+              <div class="luxury-card-content">
+                <h3 data-i18n="wwd_wedding">Организация свадьбы</h3>
+              </div>
+            </a>
+            <a href="services.html" class="luxury-card">
+              <div
+                class="luxury-card-img"
+                style="
+                  background-image: url(&quot;https://images.unsplash.com/photo-1556761175-5973dc0f32b7?q=80&w=800&auto=format&fit=crop&quot;);
+                "
+              ></div>
+              <div class="luxury-card-overlay"></div>
+              <div class="luxury-card-content">
+                <h3 data-i18n="wwd_teambuilding">Тимбилдинги</h3>
+              </div>
+            </a>
+            <a href="services.html" class="luxury-card">
+              <div
+                class="luxury-card-img"
+                style="
+                  background-image: url(&quot;https://images.unsplash.com/photo-1530103862676-de8c9debad1d?q=80&w=800&auto=format&fit=crop&quot;);
+                "
+              ></div>
+              <div class="luxury-card-overlay"></div>
+              <div class="luxury-card-content">
+                <h3 data-i18n="wwd_birthday">Дни рождения</h3>
+              </div>
+            </a>
+            <a href="services.html" class="luxury-card">
+              <div
+                class="luxury-card-img"
+                style="
+                  background-image: url(&quot;https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=800&auto=format&fit=crop&quot;);
+                "
+              ></div>
+              <div class="luxury-card-overlay"></div>
+              <div class="luxury-card-content">
+                <h3 data-i18n="wwd_party">Тематические вечеринки</h3>
+              </div>
+            </a>
+            <a href="portfolio.html" class="luxury-card text-only-card">
+              <div class="luxury-card-content centered-content">
+                <h3 class="gold-text" data-i18n="wwd_catalog">
+                  СМОТРЕТЬ КАТАЛОГ МЕРОПРИЯТИЙ
+                </h3>
+                <div class="luxury-arrow">
+                  <i class="fas fa-arrow-right"></i>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="out-of-box-luxury section-padding">
+        <div class="container text-center">
+          <h2 class="section-title" data-i18n="out_box_title">
+            МЫ СОЗДАЕМ СОБЫТИЯ ВНЕ ШАБЛОНОВ
+          </h2>
+          <div class="oob-luxury-wrapper">
+            <div class="oob-360-block">
+              <h3 class="gold-text" data-i18n="oob_360">
+                ПОЛНЫЙ ЦИКЛ (360 ГРАДУСОВ)
+              </h3>
+              <div class="cycle-luxury-flow">
+                <div class="cycle-item">
+                  <span data-i18n="c_idea">Идея</span>
+                </div>
+                <div class="cycle-dot"></div>
+                <div class="cycle-item">
+                  <span data-i18n="c_creative">Креатив</span>
+                </div>
+                <div class="cycle-dot"></div>
+                <div class="cycle-item">
+                  <span data-i18n="c_prod">Продакшн</span>
+                </div>
+                <div class="cycle-dot"></div>
+                <div class="cycle-item">
+                  <span data-i18n="c_realize">Реализация</span>
+                </div>
+                <div class="cycle-dot"></div>
+                <div class="cycle-item">
+                  <span data-i18n="c_analytics">Аналитика</span>
+                </div>
+              </div>
+            </div>
+            <div class="oob-features-grid">
+              <div class="feature-luxury-card">
+                <div class="feat-icon"><i class="fas fa-globe"></i></div>
+                <h4 data-i18n="oob_c1">МАСШТАБ И ГЕОГРАФИЯ</h4>
+                <p data-i18n="oob_c1_d">Работаем по всему ОАЭ и Катару.</p>
+              </div>
+              <div class="feature-luxury-card">
+                <div class="feat-icon"><i class="fas fa-users"></i></div>
+                <h4 data-i18n="oob_c2">КОМАНДА ЭКСПЕРТОВ</h4>
+                <p data-i18n="oob_c2_d">
+                  Senior-специалисты с многолетним опытом.
+                </p>
+              </div>
+              <div class="feature-luxury-card highlight-card">
+                <div class="feat-icon"><i class="fas fa-lock"></i></div>
+                <h4 class="gold-text" data-i18n="oob_c3">PREMIUM СЕРВИС</h4>
+                <p data-i18n="oob_c3_d">Строгая конфиденциальность NDA</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery-luxury section-padding">
+        <div class="container text-center">
+          <h2 class="section-title" data-i18n="gallery_title">
+            ГАЛЕРЕЯ ПРОЕКТОВ
+          </h2>
+          <div class="swiper gallery-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide gal-lux-card">
+                <img
+                  src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=800&auto=format&fit=crop"
+                  alt="Project"
+                />
+              </div>
+              <div class="swiper-slide gal-lux-card">
+                <img
+                  src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?q=80&w=800&auto=format&fit=crop"
+                  alt="Project"
+                />
+              </div>
+              <div class="swiper-slide gal-lux-card">
+                <img
+                  src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=800&auto=format&fit=crop"
+                  alt="Project"
+                />
+              </div>
+              <div class="swiper-slide gal-lux-card">
+                <img
+                  src="https://images.unsplash.com/photo-1561489413-985b06da5bee?q=80&w=800&auto=format&fit=crop"
+                  alt="Project"
+                />
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="services-slider-section section-padding">
+        <div class="container text-center">
+          <h2 class="section-title" data-i18n="srv_label">НАШИ УСЛУГИ</h2>
+          <div class="swiper services-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide srv-lux-card">
+                <img
+                  src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=800&auto=format&fit=crop"
+                  alt="Show"
+                />
+                <div class="srv-lux-content">
+                  <h3 data-i18n="srv_tech">Шоу-программа</h3>
+                </div>
+              </div>
+              <div class="swiper-slide srv-lux-card">
+                <img
+                  src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=800&auto=format&fit=crop"
+                  alt="Photo"
+                />
+                <div class="srv-lux-content">
+                  <h3 data-i18n="srv_photo">Фото- видео съемка</h3>
+                </div>
+              </div>
+              <div class="swiper-slide srv-lux-card">
+                <img
+                  src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=800&auto=format&fit=crop"
+                  alt="Location"
+                />
+                <div class="srv-lux-content">
+                  <h3 data-i18n="srv_loc">Место проведения</h3>
+                </div>
+              </div>
+              <div class="swiper-slide srv-lux-card">
+                <img
+                  src="https://images.unsplash.com/photo-1621263764928-df1444c5e859?q=80&w=800&auto=format&fit=crop"
+                  alt="Hosts"
+                />
+                <div class="srv-lux-content">
+                  <h3 data-i18n="srv_host">Ведущие</h3>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="reviews-section section-padding">
+        <div class="container text-center">
+          <h2 class="section-title" data-i18n="reviews_title">
+            ОТЗЫВЫ КЛИЕНТОВ
+          </h2>
+          <div class="swiper reviews-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide review-card">
+                <div class="review-quote">
+                  <i class="fas fa-quote-left"></i>
+                </div>
+                <p class="review-text" data-i18n="review_1_text">
+                  Организация на высшем уровне. Каждая деталь была продумана до
+                  мелочей. Это был истинный премиум-опыт.
+                </p>
+                <h4 class="review-author" data-i18n="review_1_author">
+                  CEO, Международная корпорация
+                </h4>
+              </div>
+              <div class="swiper-slide review-card">
+                <div class="review-quote">
+                  <i class="fas fa-quote-left"></i>
+                </div>
+                <p class="review-text" data-i18n="review_2_text">
+                  Невероятное внимание к деталям и потрясающий вкус команды.
+                  Наша свадьба стала событием года.
+                </p>
+                <h4 class="review-author" data-i18n="review_2_author">
+                  VIP Клиент, Дубай
+                </h4>
+              </div>
+              <div class="swiper-slide review-card">
+                <div class="review-quote">
+                  <i class="fas fa-quote-left"></i>
+                </div>
+                <p class="review-text" data-i18n="review_3_text">
+                  Превосходный сервис и полная конфиденциальность. Мы доверяем
+                  свои мероприятия только Amara Group.
+                </p>
+                <h4 class="review-author" data-i18n="review_3_author">
+                  Генеральный директор, Катар
+                </h4>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="team-luxury section-padding" id="about">
+        <div class="container text-center">
+          <h2 class="section-title" data-i18n="team_title">НАША КОМАНДА</h2>
+          <div class="swiper team-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide team-lux-card">
+                <div
+                  class="team-lux-img"
+                  style="
+                    background-image: url(&quot;https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=400&auto=format&fit=crop&grayscale=1&quot;);
+                  "
+                ></div>
+                <h4>Name 1</h4>
+                <p class="gold-text">CEO & Founder</p>
+              </div>
+              <div class="swiper-slide team-lux-card">
+                <div
+                  class="team-lux-img"
+                  style="
+                    background-image: url(&quot;https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400&auto=format&fit=crop&grayscale=1&quot;);
+                  "
+                ></div>
+                <h4>Name 2</h4>
+                <p class="gold-text">Head of Production</p>
+              </div>
+              <div class="swiper-slide team-lux-card">
+                <div
+                  class="team-lux-img"
+                  style="
+                    background-image: url(&quot;https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=400&auto=format&fit=crop&grayscale=1&quot;);
+                  "
+                ></div>
+                <h4>Name 3</h4>
+                <p class="gold-text">Art Director</p>
+              </div>
+              <div class="swiper-slide team-lux-card">
+                <div
+                  class="team-lux-img"
+                  style="
+                    background-image: url(&quot;https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=400&auto=format&fit=crop&grayscale=1&quot;);
+                  "
+                ></div>
+                <h4>Name 4</h4>
+                <p class="gold-text">Technical Director</p>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-luxury section-padding" id="contact">
+        <div class="container">
+          <div class="contact-box">
+            <div class="contact-box-left text-center">
+              <h2 class="section-title" data-i18n="lead_title">
+                ОСТАВЬТЕ ЗАЯВКУ
+              </h2>
+              <p class="contact-sub" data-i18n="cta_desc">
+                Заполните форму, и наш менеджер свяжется с вами для обсуждения
+                деталей вашего эксклюзивного события.
+              </p>
+            </div>
+            <div class="contact-box-right">
+              <form class="luxury-form">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    data-i18n="pl_name"
+                    placeholder="Имя"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <input type="tel" placeholder="Телефон" required />
+                </div>
+                <button
+                  type="submit"
+                  class="btn-gold w-100"
+                  data-i18n="btn_send"
+                >
+                  Отправить
+                </button>
+              </form>
             </div>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer-luxury">
       <div class="container">
-        <div class="footer-top">
-          <div class="f-contact">
-            <a href="tel:+971505325095" class="f-phone"
-              ><i class="fas fa-phone-alt"></i> +971 50 532 5095</a
-            >
-            <a href="mailto:info@amaraevent.com" class="f-email"
-              >info@amaraevent.com</a
-            >
+        <div class="footer-grid">
+          <div class="f-brand">
+            <img
+              src="https://www.amaraevent.com/newwhotelogoamara.png"
+              alt="Amara Group"
+              class="f-logo"
+            />
+            <p class="f-desc" data-i18n="about_p1">
+              Агентство полного цикла с глубокими корнями в странах Персидского
+              залива. Мы работаем на стыке роскоши, технологий и культуры.
+            </p>
           </div>
-          <div class="f-socials">
-            <a href="#" class="fs-circle"><i class="fab fa-youtube"></i></a>
-            <a href="https://w.app/xpcw7w" class="fs-circle"
-              ><i class="fab fa-whatsapp"></i
-            ></a>
-            <a href="#" class="fs-circle"
-              ><i class="fab fa-telegram-plane"></i
-            ></a>
-            <a
-              href="https://www.instagram.com/amara.eventgroup/"
-              class="fs-circle"
-              ><i class="fab fa-instagram"></i
-            ></a>
-          </div>
-        </div>
-        <div class="footer-links">
-          <div class="f-col">
-            <h4 data-i18n="ftr_nav">МЕРОПРИЯТИЯ</h4>
+          <div class="f-links">
+            <h4 class="gold-text" data-i18n="ftr_nav">МЕРОПРИЯТИЯ</h4>
             <a href="portfolio.html" data-i18n="wwd_wedding"
               >Организация свадьбы</a
             >
@@ -612,19 +585,23 @@
               >Тимбилдинги</a
             >
           </div>
-          <div class="f-col">
-            <h4 data-i18n="ftr_srv">НАШИ УСЛУГИ</h4>
-            <a href="services.html" data-i18n="srv_tech">Шоу-программа</a>
-            <a href="services.html" data-i18n="srv_photo">Фото- видео съемка</a>
-            <a href="services.html" data-i18n="srv_loc">Место проведения</a>
-          </div>
-          <div class="f-col">
-            <h4 data-i18n="ftr_company">КОМПАНИЯ</h4>
-            <a href="#about" data-i18n="nav_about">О нас</a>
-            <a href="contact.html" data-i18n="nav_contact">Контакты</a>
+          <div class="f-contact">
+            <h4 class="gold-text" data-i18n="nav_contact">КОНТАКТЫ</h4>
+            <a href="tel:+971505325095">+971 50 532 5095</a>
+            <a href="mailto:info@amaraevent.com">info@amaraevent.com</a>
+            <div class="f-socials">
+              <a
+                href="https://www.instagram.com/amara.eventgroup/"
+                target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="https://w.app/xpcw7w" target="_blank"
+                ><i class="fab fa-whatsapp"></i
+              ></a>
+            </div>
           </div>
         </div>
-        <div class="footer-bottom">
+        <div class="footer-bottom text-center">
           <p data-i18n="ftr_rights">© 2026 Amara Group. Все права защищены.</p>
         </div>
       </div>

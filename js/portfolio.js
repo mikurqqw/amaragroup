@@ -1,60 +1,65 @@
 document.addEventListener("DOMContentLoaded", () => {
   const grid = document.getElementById("portfolio-grid");
-  const filterBtns = document.querySelectorAll(".filter-btn");
+  const filterButtons = document.querySelectorAll(".filter-btn");
 
-  // 1. Загружаем фотки из JSON (который будет редактировать CMS)
-  fetch("js/portfolio-data.json")
-    .then((response) => response.json())
-    .then((data) => {
-      grid.innerHTML = ""; // Очищаем старые статичные картинки из HTML
+  if (!grid) return;
 
-      // 2. Рисуем загруженные картинки
-      data.projects.forEach((project) => {
+  const projects = [
+    {
+      category: "corporate",
+      img: "https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=800&auto=format&fit=crop",
+    },
+    {
+      category: "private",
+      img: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=800&auto=format&fit=crop",
+    },
+    {
+      category: "brand",
+      img: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=800&auto=format&fit=crop",
+    },
+    {
+      category: "yacht",
+      img: "https://images.unsplash.com/photo-1561489413-985b06da5bee?q=80&w=800&auto=format&fit=crop",
+    },
+    {
+      category: "private",
+      img: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=800&auto=format&fit=crop",
+    },
+    {
+      category: "corporate",
+      img: "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?q=80&w=800&auto=format&fit=crop",
+    },
+  ];
+
+  function renderPortfolio(filter) {
+    grid.innerHTML = "";
+    projects.forEach((project) => {
+      if (filter === "all" || project.category === filter) {
         const item = document.createElement("div");
-        item.className = "masonry-item portfolio-item";
-        item.setAttribute("data-category", project.category);
-
-        // Добавляем эффект появления
-        item.style.opacity = "0";
-        item.innerHTML = `<img src="${project.image}" alt="${project.alt}">`;
+        item.className = "masonry-item animate-fade-up";
+        item.innerHTML = `<img src="${project.img}" alt="Project">`;
         grid.appendChild(item);
-
-        // Плавное появление после рендера
-        setTimeout(() => (item.style.opacity = "1"), 100);
-      });
-
-      // 3. Включаем фильтры (как было раньше)
-      initializeFilters();
-    })
-    .catch((err) => console.error("Ошибка загрузки портфолио:", err));
-
-  function initializeFilters() {
-    const portfolioItems = document.querySelectorAll(".portfolio-item");
-    filterBtns.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        filterBtns.forEach((b) => b.classList.remove("active"));
-        btn.classList.add("active");
-
-        const filterValue = btn.getAttribute("data-filter");
-
-        portfolioItems.forEach((item) => {
-          const itemCategory = item.getAttribute("data-category");
-          item.style.opacity = "0";
-          item.style.transform = "scale(0.95)";
-
-          setTimeout(() => {
-            if (filterValue === "all" || filterValue === itemCategory) {
-              item.classList.remove("hide");
-              setTimeout(() => {
-                item.style.opacity = "1";
-                item.style.transform = "scale(1)";
-              }, 50);
-            } else {
-              item.classList.add("hide");
-            }
-          }, 300);
-        });
-      });
+      }
     });
+
+    setTimeout(() => {
+      const items = document.querySelectorAll(".masonry-item");
+      items.forEach((item, index) => {
+        setTimeout(() => {
+          item.classList.add("visible");
+        }, index * 100);
+      });
+    }, 50);
   }
+
+  renderPortfolio("all");
+
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      filterButtons.forEach((btn) => btn.classList.remove("active"));
+      button.classList.add("active");
+      const filterValue = button.getAttribute("data-filter");
+      renderPortfolio(filterValue);
+    });
+  });
 });

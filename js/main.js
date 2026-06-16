@@ -41,23 +41,21 @@ document.addEventListener("DOMContentLoaded", () => {
       if (btn) {
         const originalText = btn.innerText;
         btn.disabled = true;
-        btn.innerText = "Отправка...";
+        btn.innerText = "ОТПРАВКА...";
 
         setTimeout(() => {
           form.reset();
-          btn.innerText = "Успешно!";
+          btn.innerText = "УСПЕШНО!";
           btn.style.background = "#25D366";
-
-          const successMsg = form.parentElement.querySelector(".form-success");
-          if (successMsg) {
-            successMsg.classList.remove("hidden");
-            setTimeout(() => successMsg.classList.add("hidden"), 5000);
-          }
+          btn.style.borderColor = "#25D366";
+          btn.style.color = "#fff";
 
           setTimeout(() => {
             btn.disabled = false;
             btn.innerText = originalText;
             btn.style.background = "";
+            btn.style.borderColor = "";
+            btn.style.color = "";
           }, 3000);
         }, 1000);
       }
@@ -108,6 +106,18 @@ document.addEventListener("DOMContentLoaded", () => {
       breakpoints: {
         640: { slidesPerView: 2 },
         1024: { slidesPerView: 4 },
+      },
+    });
+  }
+
+  if (document.querySelector(".reviews-swiper")) {
+    new Swiper(".reviews-swiper", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
       },
     });
   }

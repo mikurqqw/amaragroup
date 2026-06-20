@@ -198,7 +198,7 @@ document.addEventListener("DOMContentLoaded", () => {
       wwdGrid.innerHTML = "";
       siteWhatWeDo.forEach((item) => {
         wwdGrid.innerHTML += `
-                    <a href="services.html" class="luxury-card animate-fade-up">
+                    <a href="services.html" class="luxury-card">
                         <div class="luxury-card-img" style="background-image: url('${item.img}');"></div>
                         <div class="luxury-card-overlay"></div>
                         <div class="luxury-card-content">
@@ -208,7 +208,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 `;
       });
       wwdGrid.innerHTML += `
-                <a href="portfolio.html" class="luxury-card text-only-card animate-fade-up">
+                <a href="portfolio.html" class="luxury-card text-only-card">
                     <div class="luxury-card-content centered-content">
                         <h3 class="gold-text">${catalogCardText[currentLang] || catalogCardText["ru"]}</h3>
                         <div class="luxury-arrow"><i class="fas fa-arrow-right"></i></div>
@@ -267,7 +267,7 @@ document.addEventListener("DOMContentLoaded", () => {
       siteTeam.forEach((t) => {
         teamGrid.innerHTML += `
                     <div class="swiper-slide team-lux-card">
-                        <div class="team-lux-img animate-fade-up" style="background-image: url('${t.img}'); border-radius: 50%; aspect-ratio: 1/1; height: auto; max-width: 250px; margin: 0 auto 2rem; background-size: cover; background-position: center; filter: grayscale(100%); transition: filter 0.5s ease; box-shadow: var(--shadow);"></div>
+                        <div class="team-lux-img" style="background-image: url('${t.img}'); border-radius: 50%; aspect-ratio: 1/1; height: auto; max-width: 250px; margin: 0 auto 2rem; background-size: cover; background-position: center; filter: grayscale(100%); transition: filter 0.5s ease; box-shadow: var(--shadow);"></div>
                         <h4 style="font-size: 1.5rem; margin-bottom: 0.5rem; font-family: var(--font-heading); font-weight: 600;">${t.name[currentLang] || t.name["ru"]}</h4>
                         <p class="gold-text" style="font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; font-weight: 600;">${t.position[currentLang] || t.position["ru"]}</p>
                     </div>
@@ -280,7 +280,7 @@ document.addEventListener("DOMContentLoaded", () => {
       reviewsGrid.innerHTML = "";
       siteReviews.forEach((r) => {
         reviewsGrid.innerHTML += `
-                    <div class="swiper-slide review-card animate-fade-up">
+                    <div class="swiper-slide review-card">
                         <div class="review-quote"><i class="fas fa-quote-left"></i></div>
                         <div class="rating gold-text" style="margin-bottom: 1.5rem; font-size: 1.2rem; letter-spacing: 3px;">
                             ${renderStars(r.rating)}

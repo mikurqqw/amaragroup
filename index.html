@@ -126,42 +126,6 @@
         </div>
       </section>
 
-      <section class="trust-logos section-padding">
-        <div class="container text-center">
-          <div class="swiper clients-swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide client-logo">
-                <img
-                  src="https://www.amaraevent.com/nestle_new_logo_2.png"
-                  alt="Nestle"
-                />
-              </div>
-              <div class="swiper-slide client-logo">
-                <img
-                  src="https://www.amaraevent.com/loreal_new__logo_2.png"
-                  alt="Loreal"
-                />
-              </div>
-              <div class="swiper-slide client-logo">
-                <img
-                  src="https://www.amaraevent.com/kaspi_new_logo_2.png"
-                  alt="Kaspi"
-                />
-              </div>
-              <div class="swiper-slide client-logo">
-                <span class="logo-text">BCC.kz</span>
-              </div>
-              <div class="swiper-slide client-logo">
-                <span class="logo-text">Coca-Cola</span>
-              </div>
-              <div class="swiper-slide client-logo">
-                <span class="logo-text">JUSAN</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section class="stats-luxury section-padding">
         <div class="container text-center">
           <h2 class="section-title gold-text" data-i18n="stats_title">
@@ -417,102 +381,144 @@
         </div>
       </section>
 
+      <section
+        class="trust-logos section-padding"
+        style="background: transparent"
+      >
+        <div class="container text-center">
+          <h2 class="section-title" data-i18n="partners_title">НАМ ДОВЕРЯЮТ</h2>
+          <div class="swiper clients-swiper">
+            <div class="swiper-wrapper" id="dynamic-partners"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-luxury section-padding" id="about">
+        <div class="container text-center">
+          <h2 class="section-title gold-text" data-i18n="about_title">
+            О КОМПАНИИ
+          </h2>
+          <div
+            style="
+              max-width: 900px;
+              margin: 0 auto;
+              text-align: justify;
+              text-align-last: center;
+            "
+          >
+            <p
+              data-i18n="about_p1"
+              style="
+                font-size: 1.1rem;
+                color: var(--text-main);
+                font-weight: 500;
+              "
+            ></p>
+            <p data-i18n="about_p2"></p>
+            <p data-i18n="about_p3"></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="team-luxury section-padding">
+        <div class="container text-center">
+          <h2 class="section-title" data-i18n="team_title">НАША КОМАНДА</h2>
+          <div class="swiper team-swiper">
+            <div class="swiper-wrapper" id="dynamic-team"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
       <section class="reviews-section section-padding">
         <div class="container text-center">
           <h2 class="section-title" data-i18n="reviews_title">
             ОТЗЫВЫ КЛИЕНТОВ
           </h2>
           <div class="swiper reviews-swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide review-card">
-                <div class="review-quote">
-                  <i class="fas fa-quote-left"></i>
-                </div>
-                <p class="review-text" data-i18n="review_1_text">
-                  Организация на высшем уровне. Каждая деталь была продумана до
-                  мелочей. Это был истинный премиум-опыт.
-                </p>
-                <h4 class="review-author" data-i18n="review_1_author">
-                  CEO, Международная корпорация
-                </h4>
-              </div>
-              <div class="swiper-slide review-card">
-                <div class="review-quote">
-                  <i class="fas fa-quote-left"></i>
-                </div>
-                <p class="review-text" data-i18n="review_2_text">
-                  Невероятное внимание к деталям и потрясающий вкус команды.
-                  Наша свадьба стала событием года.
-                </p>
-                <h4 class="review-author" data-i18n="review_2_author">
-                  VIP Клиент, Дубай
-                </h4>
-              </div>
-              <div class="swiper-slide review-card">
-                <div class="review-quote">
-                  <i class="fas fa-quote-left"></i>
-                </div>
-                <p class="review-text" data-i18n="review_3_text">
-                  Превосходный сервис и полная конфиденциальность. Мы доверяем
-                  свои мероприятия только Amara Group.
-                </p>
-                <h4 class="review-author" data-i18n="review_3_author">
-                  Генеральный директор, Катар
-                </h4>
-              </div>
-            </div>
+            <div class="swiper-wrapper" id="dynamic-reviews"></div>
             <div class="swiper-pagination"></div>
           </div>
-        </div>
-      </section>
 
-      <section class="team-luxury section-padding" id="about">
-        <div class="container text-center">
-          <h2 class="section-title" data-i18n="team_title">НАША КОМАНДА</h2>
-          <div class="swiper team-swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide team-lux-card">
-                <div
-                  class="team-lux-img"
-                  style="
-                    background-image: url(&quot;https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=400&auto=format&fit=crop&grayscale=1&quot;);
-                  "
-                ></div>
-                <h4>Name 1</h4>
-                <p class="gold-text">CEO & Founder</p>
+          <div
+            class="review-form-box"
+            style="
+              max-width: 600px;
+              margin: 4rem auto 0;
+              background: var(--bg-card);
+              padding: 3rem;
+              border-radius: var(--radius);
+              box-shadow: var(--shadow);
+              text-align: left;
+            "
+          >
+            <h3
+              data-i18n="rev_leave_title"
+              class="gold-text"
+              style="font-size: 1.5rem; text-align: center; margin-bottom: 2rem"
+            >
+              ОСТАВИТЬ ОТЗЫВ
+            </h3>
+            <form id="submit-review-form" class="luxury-form">
+              <div class="form-group">
+                <input
+                  type="text"
+                  data-i18n="pl_name"
+                  placeholder="Имя"
+                  required
+                />
               </div>
-              <div class="swiper-slide team-lux-card">
-                <div
-                  class="team-lux-img"
-                  style="
-                    background-image: url(&quot;https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400&auto=format&fit=crop&grayscale=1&quot;);
-                  "
-                ></div>
-                <h4>Name 2</h4>
-                <p class="gold-text">Head of Production</p>
+              <div class="form-group">
+                <input
+                  type="number"
+                  data-i18n="rev_rate"
+                  placeholder="Ваша оценка (1-10)"
+                  min="1"
+                  max="10"
+                  required
+                />
               </div>
-              <div class="swiper-slide team-lux-card">
-                <div
-                  class="team-lux-img"
+              <div class="form-group">
+                <textarea
+                  data-i18n="rev_comment"
+                  placeholder="Ваш отзыв"
+                  rows="4"
+                  required
                   style="
-                    background-image: url(&quot;https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=400&auto=format&fit=crop&grayscale=1&quot;);
+                    width: 100%;
+                    background: transparent;
+                    border: none;
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                    padding: 1rem 0;
+                    color: var(--text-main);
+                    font-family: var(--font-text);
+                    font-size: 1rem;
+                    outline: none;
+                    transition: border-color 0.4s;
+                    resize: none;
                   "
-                ></div>
-                <h4>Name 3</h4>
-                <p class="gold-text">Art Director</p>
+                ></textarea>
               </div>
-              <div class="swiper-slide team-lux-card">
-                <div
-                  class="team-lux-img"
-                  style="
-                    background-image: url(&quot;https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=400&auto=format&fit=crop&grayscale=1&quot;);
-                  "
-                ></div>
-                <h4>Name 4</h4>
-                <p class="gold-text">Technical Director</p>
-              </div>
-            </div>
-            <div class="swiper-pagination"></div>
+              <button
+                type="submit"
+                class="btn-gold w-100"
+                data-i18n="rev_submit"
+              >
+                Отправить отзыв
+              </button>
+              <p
+                class="form-success text-center"
+                data-i18n="rev_success"
+                style="
+                  color: #25d366;
+                  margin-top: 1rem;
+                  display: none;
+                  font-weight: 600;
+                "
+              >
+                Спасибо! Ваш отзыв отправлен на модерацию.
+              </p>
+            </form>
           </div>
         </div>
       </section>
@@ -567,8 +573,8 @@
               style="filter: invert(1)"
             />
             <p class="f-desc" data-i18n="about_p1">
-              Агентство полного цикла с глубокими корнями в странах Персидского
-              залива. Мы работаем на стыке роскоши, технологий и культуры.
+              Amara Group — агентство полного цикла с сильным присутствием в
+              Казахстане и Катаре.
             </p>
           </div>
           <div class="f-links">

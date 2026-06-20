@@ -46,22 +46,29 @@ const translations = {
     srv_loc: "Место проведения",
     srv_host: "Ведущие",
     reviews_title: "ОТЗЫВЫ КЛИЕНТОВ",
-    review_1_text:
-      "Организация на высшем уровне. Каждая деталь была продумана до мелочей. Это был истинный премиум-опыт.",
-    review_1_author: "CEO, Международная корпорация",
-    review_2_text:
-      "Невероятное внимание к деталям и потрясающий вкус команды. Наша свадьба стала событием года.",
-    review_2_author: "VIP Клиент, Дубай",
-    review_3_text:
-      "Превосходный сервис и полная конфиденциальность. Мы доверяем свои мероприятия только Amara Group.",
-    review_3_author: "Генеральный директор, Катар",
     team_title: "НАША КОМАНДА",
+    partners_title: "НАМ ДОВЕРЯЮТ",
     lead_title: "ОСТАВЬТЕ ЗАЯВКУ",
     cta_desc:
       "Заполните форму, и наш менеджер свяжется с вами для обсуждения деталей вашего эксклюзивного события.",
     pl_name: "Имя",
+
+    /* НОВЫЙ ТЕКСТ О НАС */
+    about_title: "О КОМПАНИИ",
     about_p1:
-      "Агентство полного цикла с глубокими корнями в странах Персидского залива. Мы работаем на стыке роскоши, технологий и культуры.",
+      "Amara Group — агентство полного цикла с сильным присутствием в Казахстане и Катаре, работающее на стыке роскоши, технологий и культуры. Каждый проект — это больше, чем просто событие, это тщательно продуманный опыт, отражающий ценности вашего бренда или семьи.",
+    about_p2:
+      "Наша команда объединяет опытных специалистов по всему Казахстану и Катару, опираясь на надежную сеть тщательно проверенных партнеров и поставщиков. Результат — проведение мероприятий на международном уровне, с региональной экспертизой, исключительным вниманием к деталям и конкурентоспособными ценами.",
+    about_p3:
+      "Помимо организации мероприятий, Amara Group также является продюсером развлекательных шоу. Мы создаем и представляем захватывающие живые выступления с участием артистов мирового класса и талантов со всего мира, включая семейные развлечения, детские шоу, театральные постановки, мюзиклы, стендап-комедии, концерты, культурные программы и иммерсивные шоу, призванные увлечь аудиторию всех возрастов.",
+
+    /* ФОРМА ОТЗЫВОВ */
+    rev_leave_title: "ОСТАВИТЬ ОТЗЫВ",
+    rev_rate: "Ваша оценка (1-10)",
+    rev_comment: "Ваш отзыв",
+    rev_submit: "Отправить отзыв",
+    rev_success: "Спасибо! Ваш отзыв отправлен на модерацию.",
+
     ftr_nav: "МЕРОПРИЯТИЯ",
     ftr_srv: "НАШИ УСЛУГИ",
     ftr_rights: "© 2026 Amara Group. Все права защищены.",
@@ -158,22 +165,27 @@ const translations = {
     srv_loc: "Venue",
     srv_host: "Hosts",
     reviews_title: "CLIENT REVIEWS",
-    review_1_text:
-      "Top-level organization. Every detail was thought out. It was a true premium experience.",
-    review_1_author: "CEO, International Corporation",
-    review_2_text:
-      "Incredible attention to detail and amazing taste. Our wedding was the event of the year.",
-    review_2_author: "VIP Client, Dubai",
-    review_3_text:
-      "Excellent service and complete confidentiality. We only trust Amara Group.",
-    review_3_author: "General Director, Qatar",
     team_title: "OUR TEAM",
+    partners_title: "OUR PARTNERS",
     lead_title: "LEAVE A REQUEST",
     cta_desc:
       "Fill out the form, and our manager will contact you to discuss your exclusive event.",
     pl_name: "Name",
+
+    about_title: "ABOUT US",
     about_p1:
-      "Full-cycle agency with deep roots in the GCC. We operate at the intersection of luxury, tech, and culture.",
+      "Amara Group is a full-service events agency with a strong presence in Kazakhstan and Qatar, operating at the intersection of luxury, technology, and culture. Every project is more than an event—it is a meticulously crafted experience that reflects the values of your brand or your family.",
+    about_p2:
+      "Our team brings together experienced specialists across Kazakhstan and Qatar, supported by a trusted network of carefully vetted partners and suppliers. The result is international-quality event execution, delivered with regional expertise, exceptional attention to detail, and competitive pricing.",
+    about_p3:
+      "Beyond event management, Amara Group is also a producer of live entertainment experiences. We create and present spectacular live shows featuring world-class performers and creative talent from around the globe, including family entertainment, children’s shows, theatrical performances, musicals, stand-up comedy, concerts, cultural productions, and immersive live experiences designed to captivate audiences of all ages.",
+
+    rev_leave_title: "LEAVE A REVIEW",
+    rev_rate: "Rating (1-10)",
+    rev_comment: "Your comment",
+    rev_submit: "Submit Review",
+    rev_success: "Thank you! Your review has been sent for moderation.",
+
     ftr_nav: "EVENTS",
     ftr_srv: "OUR SERVICES",
     ftr_rights: "© 2026 Amara Group. All rights reserved.",
@@ -266,18 +278,26 @@ const translations = {
     srv_loc: "المكان",
     srv_host: "مقدمون",
     reviews_title: "آراء العملاء",
-    review_1_text: "تنظيم على أعلى مستوى. تجربة مميزة حقًا.",
-    review_1_author: "مدير تنفيذي",
-    review_2_text: "اهتمام لا يُصدق بالتفاصيل. كان زفافنا حدث العام.",
-    review_2_author: "عميل VIP",
-    review_3_text: "خدمة ممتازة وسرية تامة. نثق فقط بمجموعة أمارا.",
-    review_3_author: "مدير عام",
     team_title: "فريقنا",
+    partners_title: "شركاؤنا",
     lead_title: "اترك طلبك",
     cta_desc: "املأ النموذج وسيتصل بك مديرنا.",
     pl_name: "الاسم",
+
+    about_title: "معلومات عنا",
     about_p1:
-      "وكالة متكاملة لها جذور عميقة في دول الخليج. نعمل عند تقاطع الفخامة والتكنولوجيا.",
+      "مجموعة أمارا هي وكالة فعاليات متكاملة الخدمات تتمتع بحضور قوي في كازاخستان وقطر، وتعمل عند تقاطع الفخامة والتكنولوجيا والثقافة. كل مشروع هو أكثر من مجرد حدث - إنه تجربة مصممة بدقة تعكس قيم علامتك التجارية أو عائلتك.",
+    about_p2:
+      "يجمع فريقنا متخصصين ذوي خبرة في جميع أنحاء كازاخستان وقطر، بدعم من شبكة موثوقة من الشركاء والموردين الذين تم فحصهم بعناية. والنتيجة هي تنفيذ الفعاليات بجودة عالمية، مع خبرة إقليمية، واهتمام استثنائي بالتفاصيل.",
+    about_p3:
+      "بالإضافة إلى إدارة الفعاليات، تعد مجموعة أمارا أيضًا منتجًا للتجارب الترفيهية الحية. نحن نبتكر ونقدم عروضًا حية مذهلة تضم فنانين ومواهب من الطراز العالمي، مصممة لجذب الجماهير من جميع الأعمار.",
+
+    rev_leave_title: "اترك تقييمك",
+    rev_rate: "التقييم (1-10)",
+    rev_comment: "تعليقك",
+    rev_submit: "إرسال التقييم",
+    rev_success: "شكرا لك! تم إرسال تقييمك للمراجعة.",
+
     ftr_nav: "الفعاليات",
     ftr_srv: "خدماتنا",
     ftr_rights: "© 2026 مجموعة أمارا. جميع الحقوق محفوظة.",

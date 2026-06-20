@@ -1,7 +1,7 @@
 // =====================================================================
-// ПАНЕЛЬ УПРАВЛЕНИЯ ПОРТФОЛИО
-// Категории: 'private', 'corporate', 'brand', 'yacht'
-// Тип (type): 'image' или 'video'
+// ПАНЕЛЬ УПРАВЛЕНИЯ ПОРТФОЛИО (АДМИН)
+// Категории (category): 'private', 'corporate', 'brand', 'yacht'
+// Тип (type): 'image' (фото) или 'video' (видео)
 // =====================================================================
 
 const portfolioProjects = [
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
         item.className = "masonry-item animate-fade-up";
 
         if (project.type === "video") {
-          item.innerHTML = `<video src="${project.src}" autoplay muted loop playsinline style="width: 100%; display: block;"></video>`;
+          item.innerHTML = `<video src="${project.src}" autoplay muted loop playsinline style="width: 100%; display: block; border-radius: inherit;"></video>`;
         } else {
           item.innerHTML = `<img src="${project.src}" alt="Portfolio Project">`;
         }

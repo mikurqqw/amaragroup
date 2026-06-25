@@ -13,56 +13,34 @@ const sitePartners = [
   { name: "Qatar Airways" },
 ];
 
+// НАША КОМАНДА (Данные взяты из файлов "изображение.jpg", "изображение_2.jpg", "изображение_2.png")
 const siteTeam = [
   {
-    img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=400&auto=format&fit=crop",
+    img: "assets/img/team/assel.jpg", // Сюда закинь фото Асель (изображение.jpg)
+    name: { ru: "Асель Уалиева", en: "Assel Ualiyeva", ar: "أسيل والييفا" },
+    position: {
+      ru: "Основатель / CEO",
+      en: "Founder / CEO",
+      ar: "المؤسس / الرئيس التنفيذي",
+    },
+  },
+  {
+    img: "assets/img/team/nazerke.jpg", // Сюда закинь фото Назерке (изображение_2.jpg)
     name: {
-      ru: "Александр Иванов",
-      en: "Alexander Ivanov",
-      ar: "ألكسندر إيفانوف",
+      ru: "Назерке Асильбекова",
+      en: "Nazerke Assilbekova",
+      ar: "نازيرك أسيلبيكوفا",
     },
     position: {
-      ru: "CEO & Founder",
-      en: "CEO & Founder",
-      ar: "الرئيس التنفيذي والمؤسس",
-    },
-  },
-  {
-    img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400&auto=format&fit=crop",
-    name: { ru: "Елена Смирнова", en: "Elena Smirnova", ar: "إيلينا سميرنوفا" },
-    position: {
-      ru: "Head of Production",
-      en: "Head of Production",
-      ar: "رئيس الإنتاج",
-    },
-  },
-  {
-    img: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=400&auto=format&fit=crop",
-    name: { ru: "Дмитрий Волков", en: "Dmitry Volkov", ar: "ديمتري فولكوف" },
-    position: { ru: "Art Director", en: "Art Director", ar: "مدير فني" },
-  },
-  {
-    img: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=400&auto=format&fit=crop",
-    name: { ru: "Мария Ким", en: "Maria Kim", ar: "ماريا كيم" },
-    position: {
-      ru: "Event Manager",
+      ru: "Ивент-менеджер",
       en: "Event Manager",
       ar: "مدير الفعاليات",
     },
   },
   {
-    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&auto=format&fit=crop",
-    name: { ru: "Тимур Оспанов", en: "Timur Ospanov", ar: "تيمور أوسبانوف" },
-    position: {
-      ru: "Technical Director",
-      en: "Technical Director",
-      ar: "المدير الفني",
-    },
-  },
-  {
-    img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400&auto=format&fit=crop",
-    name: { ru: "Анна Лебедева", en: "Anna Lebedeva", ar: "آنا ليبيديفا" },
-    position: { ru: "Creative Lead", en: "Creative Lead", ar: "قائد إبداعي" },
+    img: "assets/img/team/host.png", // Сюда закинь фото ведущего (изображение_2.png)
+    name: { ru: "Алекс Райт", en: "Alex Wright", ar: "أليكس رايت" },
+    position: { ru: "Шоу-ведущий", en: "Show Host", ar: "مقدم العروض" },
   },
 ];
 
@@ -166,7 +144,7 @@ const siteServices = [
     title: {
       ru: "Фото- видео съемка",
       en: "Photo & Video",
-      ar: "تصوير فيديو وفوتوغرافي",
+      ar: "تصوير видео وفوتوغرافي",
     },
   },
   {

@@ -37,7 +37,7 @@ const siteTeam = [
     },
   },
   {
-    img: "assets/img/team/host.jpeg", // Файл картинки пока оставил host.jpeg, чтобы не сбились пути
+    img: "assets/img/team/host.jpeg",
     name: { ru: "Раби Марвени", en: "Rabie Marweni", ar: "رابي مارويني" },
     position: {
       ru: "Генеральный ивент-менеджер",

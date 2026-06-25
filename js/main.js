@@ -13,10 +13,9 @@ const sitePartners = [
   { name: "Qatar Airways" },
 ];
 
-// НАША КОМАНДА (Данные взяты из файлов "изображение.jpg", "изображение_2.jpg", "изображение_2.png")
 const siteTeam = [
   {
-    img: "assets/img/team/assel.jpg", // Сюда закинь фото Асель (изображение.jpg)
+    img: "assets/img/team/assel.jpeg",
     name: { ru: "Асель Уалиева", en: "Assel Ualiyeva", ar: "أسيل والييفا" },
     position: {
       ru: "Основатель / CEO",
@@ -25,7 +24,7 @@ const siteTeam = [
     },
   },
   {
-    img: "assets/img/team/nazerke.jpg", // Сюда закинь фото Назерке (изображение_2.jpg)
+    img: "assets/img/team/nazerke.jpeg",
     name: {
       ru: "Назерке Асильбекова",
       en: "Nazerke Assilbekova",
@@ -38,7 +37,7 @@ const siteTeam = [
     },
   },
   {
-    img: "assets/img/team/host.png", // Сюда закинь фото ведущего (изображение_2.png)
+    img: "assets/img/team/host.jpeg",
     name: { ru: "Алекс Райт", en: "Alex Wright", ar: "أليكس رايت" },
     position: { ru: "Шоу-ведущий", en: "Show Host", ar: "مقدم العروض" },
   },
@@ -144,7 +143,7 @@ const siteServices = [
     title: {
       ru: "Фото- видео съемка",
       en: "Photo & Video",
-      ar: "تصوير видео وفوتوغرافي",
+      ar: "تصوير فيديو وفوتوغرافي",
     },
   },
   {
@@ -245,7 +244,7 @@ document.addEventListener("DOMContentLoaded", () => {
       siteTeam.forEach((t) => {
         teamGrid.innerHTML += `
                     <div class="swiper-slide team-lux-card">
-                        <div class="team-lux-img" style="background-image: url('${t.img}'); border-radius: 50%; aspect-ratio: 1/1; height: auto; max-width: 250px; margin: 0 auto 2rem; background-size: cover; background-position: center; filter: grayscale(100%); transition: filter 0.5s ease; box-shadow: var(--shadow);"></div>
+                        <div class="team-lux-img" style="background-image: url('${t.img}'); width: 100%; max-width: 250px; aspect-ratio: 1/1; margin: 0 auto 2rem; background-size: cover; background-position: top center; border-radius: 50%; filter: grayscale(100%); transition: filter 0.5s ease; box-shadow: var(--shadow);"></div>
                         <h4 style="font-size: 1.5rem; margin-bottom: 0.5rem; font-family: var(--font-heading); font-weight: 600;">${t.name[currentLang] || t.name["ru"]}</h4>
                         <p class="gold-text" style="font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; font-weight: 600;">${t.position[currentLang] || t.position["ru"]}</p>
                     </div>

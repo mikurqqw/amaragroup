@@ -243,10 +243,14 @@ document.addEventListener("DOMContentLoaded", () => {
       teamGrid.innerHTML = "";
       siteTeam.forEach((t) => {
         teamGrid.innerHTML += `
-                    <div class="swiper-slide team-lux-card">
-                        <div class="team-lux-img" style="background-image: url('${t.img}'); width: 100%; max-width: 250px; aspect-ratio: 1/1; margin: 0 auto 2rem; background-size: cover; background-position: top center; border-radius: 50%; filter: grayscale(100%); transition: filter 0.5s ease; box-shadow: var(--shadow);"></div>
-                        <h4 style="font-size: 1.5rem; margin-bottom: 0.5rem; font-family: var(--font-heading); font-weight: 600;">${t.name[currentLang] || t.name["ru"]}</h4>
-                        <p class="gold-text" style="font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; font-weight: 600;">${t.position[currentLang] || t.position["ru"]}</p>
+                    <div class="swiper-slide team-lux-card" style="display: flex; flex-direction: column; align-items: center;">
+                        <div class="team-lux-img" 
+                             style="background-image: url('${t.img}'); width: 280px; height: 280px; max-width: 100%; margin: 0 auto 2rem; background-size: cover; background-position: top center; border-radius: 50%; filter: grayscale(100%); transition: filter 0.4s ease; box-shadow: var(--shadow); cursor: pointer;"
+                             onmouseover="this.style.filter='grayscale(0%)'" 
+                             onmouseout="this.style.filter='grayscale(100%)'">
+                        </div>
+                        <h4 style="font-size: 1.5rem; margin-bottom: 0.5rem; font-family: var(--font-heading); font-weight: 600; text-align: center;">${t.name[currentLang] || t.name["ru"]}</h4>
+                        <p class="gold-text" style="font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; font-weight: 600; text-align: center;">${t.position[currentLang] || t.position["ru"]}</p>
                     </div>
                 `;
       });
@@ -315,11 +319,12 @@ document.addEventListener("DOMContentLoaded", () => {
           slidesPerView: 1,
           spaceBetween: 30,
           loop: false,
+          centerInsufficientSlides: true, // Центрирует карточки, если их меньше чем нужно
           pagination: { el: ".swiper-pagination", clickable: true },
           breakpoints: {
             640: { slidesPerView: 2 },
-            1024: { slidesPerView: 4 },
-          },
+            1024: { slidesPerView: 3 },
+          }, // Изменил на 3 для десктопа
         }),
       );
     }

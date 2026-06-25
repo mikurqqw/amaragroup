@@ -37,9 +37,13 @@ const siteTeam = [
     },
   },
   {
-    img: "assets/img/team/host.jpeg",
-    name: { ru: "Алекс Райт", en: "Alex Wright", ar: "أليكس رايت" },
-    position: { ru: "Шоу-ведущий", en: "Show Host", ar: "مقدم العروض" },
+    img: "assets/img/team/host.jpeg", // Файл картинки пока оставил host.jpeg, чтобы не сбились пути
+    name: { ru: "Раби Марвени", en: "Rabie Marweni", ar: "رابي مارويني" },
+    position: {
+      ru: "Генеральный ивент-менеджер",
+      en: "General Event Manager",
+      ar: "مدير عام الفعاليات",
+    },
   },
 ];
 
@@ -319,12 +323,12 @@ document.addEventListener("DOMContentLoaded", () => {
           slidesPerView: 1,
           spaceBetween: 30,
           loop: false,
-          centerInsufficientSlides: true, // Центрирует карточки, если их меньше чем нужно
+          centerInsufficientSlides: true,
           pagination: { el: ".swiper-pagination", clickable: true },
           breakpoints: {
             640: { slidesPerView: 2 },
             1024: { slidesPerView: 3 },
-          }, // Изменил на 3 для десктопа
+          },
         }),
       );
     }
